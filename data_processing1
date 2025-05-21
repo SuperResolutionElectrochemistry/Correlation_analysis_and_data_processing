@@ -11,7 +11,7 @@ print(f"该文件夹下的文件数量为: {len(csv_files)}")
 
 l_i1i2 = []
 
-for a in range(1, n):
+for a in range(1, n+1):
     file = str(a) + '.xlsx'  # .csv
     datapath = os.path.join(folder_path, file)
     # data = pd.read_csv(datapath, on_bad_lines="skip")
@@ -34,7 +34,7 @@ def cal_H20(ti, t2):
     return H20
 
 
-for a in range(1, n):
+for a in range(1, n+1):
     file = str(a) + '.xlsx'  # .csv
     datapath = os.path.join(folder_path, file)
     data2 = pd.read_excel(datapath).values
