@@ -1,0 +1,146 @@
+{
+  "literature_id": "HEA-json27",
+  "doi": "10.1002/smll.202309819",
+
+  "HEA_composition": {
+    "catalyst_name": "PtRhNiFeCu HEA/C",
+    "elements": ["Pt", "Rh", "Ni", "Fe", "Cu"],
+    "atomic_ratio": "Pt:Rh:Ni:Fe:Cu = 10:15:25:26:24 (ICP-OES)",
+    "crystal_structure": "FCC solid solution",
+    "average_particle_size_nm": "~3.53",
+    "support": "carbon black (C)"
+  },
+
+  "synthesis": {
+    "method": "one-pot colloidal synthesis",
+    "precursors": [
+      "Pt(acac)2",
+      "Rh(acac)3",
+      "Ni(acac)2",
+      "Fe(acac)2",
+      "Cu(acac)2"
+    ],
+    "solvents_and_additives": [
+      "oleylamine",
+      "glucose",
+      "hexadecyltrimethylammonium bromide (CTAB)"
+    ],
+    "reaction_temperature_C": 200,
+    "note": "reaction time and atmosphere not explicitly specified in the main text"
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "uniformly distributed ultrasmall nanoparticles",
+      "average_particle_size_nm": "~3.53"
+    },
+
+    "HRTEM": {
+      "lattice_spacing_nm": 0.22,
+      "assigned_plane": "(111)"
+    },
+
+    "HAADF_STEM": {
+      "observation": "random atomic distribution with Z-contrast variation"
+    },
+
+    "SAED": {
+      "planes": ["(111)", "(200)", "(220)", "(311)"],
+      "structure_confirmation": "FCC"
+    },
+
+    "XRD": {
+      "phase": "single-phase FCC",
+      "peak_shift": "peaks shift to higher angle compared with PtRhNi due to lattice distortion"
+    },
+
+    "EDS_mapping": {
+      "distribution": "Pt, Rh, Ni, Fe, Cu uniformly distributed within individual nanoparticles"
+    },
+
+    "XPS": {
+      "Pt": "metallic Pt0 with positive binding-energy shift vs Pt/C",
+      "Rh": "metallic Rh0",
+      "Fe": "metallic Fe0",
+      "Cu": "metallic Cu0",
+      "Ni": "partially oxidized Ni2+ due to surface oxidation",
+      "interpretation": "lattice distortion and electronic interaction among five elements"
+    }
+  },
+
+  "electrochemical_performance": {
+    "HER": {
+      "electrolyte": "1 M KOH",
+      "overpotential_mV_at_10_mA_cm2": 13,
+      "Tafel_slope_mV_dec": 29.8,
+      "mass_activity_A_mgPt": {
+        "at_-50_mV_vs_RHE": 7.6,
+        "at_-70_mV_vs_RHE": 11.4
+      },
+      "mechanism": "Volmer–Tafel",
+      "stability": {
+        "chronoamperometry_h": 20,
+        "current_retention_percent": 95,
+        "ADT_cycles": 10000,
+        "overpotential_increase_mV": 6
+      }
+    },
+
+    "ORR": {
+      "electrolyte": "0.1 M HClO4",
+      "half_wave_potential_V_vs_RHE": 0.90,
+      "mass_activity_A_mgPt_at_0_9V": 1.23,
+      "specific_activity_mA_cm2_at_0_9V": 2.67,
+      "electron_transfer_number": "~4",
+      "stability": {
+        "ADT_cycles": 10000,
+        "E1_2_shift_mV": 10,
+        "mass_activity_retention_percent": 75.8
+      }
+    },
+
+    "overall_water_splitting": {
+      "cell_configuration": "PtRhNiFeCu/CP || IrO2/CP",
+      "electrolyte": "1 M KOH",
+      "cell_voltage_V": {
+        "10_mA_cm2": 1.63,
+        "100_mA_cm2": 2.08
+      },
+      "stability_h": ">100"
+    }
+  },
+
+  "theoretical_computations": {
+    "method": "density functional theory (DFT)",
+    "model": "lowest-energy random atomic arrangement of PtRhNiFeCu HEA surface",
+
+    "HER_related": {
+      "water_adsorption": "preferential adsorption on Ni and Rh sites",
+      "water_dissociation_barrier_eV": {
+        "PtRhNiFeCu": 0.86,
+        "Pt_111": 1.18
+      },
+      "hydrogen_adsorption_free_energy": {
+        "Rh_site": "lower than Pt(111), identified as main Tafel-step active site"
+      }
+    },
+
+    "ORR_related": {
+      "non_Pt_active_sites": ["Ni", "Cu"],
+      "thermodynamic_limit_potential_V": {
+        "Ni_site": 1.00,
+        "Cu_site": 0.98
+      },
+      "rate_limiting_step": {
+        "Ni_site": "*O protonation to *OH",
+        "Pt_111": "*OH desorption"
+      }
+    },
+
+    "mechanistic_conclusion": [
+      "severe lattice distortion creates diverse local electronic environments",
+      "synergistic multi-element effect optimizes both HER and ORR pathways",
+      "non-platinum sites contribute significantly to ORR activity"
+    ]
+  }
+}

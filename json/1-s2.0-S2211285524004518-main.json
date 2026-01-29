@@ -1,0 +1,190 @@
+{
+  "literature_id": "HEA-json22",
+  "doi": "10.1016/j.nanoen.2024.109703",
+
+  "HEA_composition": {
+    "catalyst_name": "FeCoNiCuMo HEA",
+    "elements": ["Fe", "Co", "Ni", "Cu", "Mo"],
+    "composition": "within 5–35 at.% for each element (confirmed by ICP-OES; see Table S2)",
+    "crystal_structure": "FCC solid solution",
+    "lattice_constant_nm": "0.357–0.365 (XRD, Vegard’s law, and HRTEM consistent)",
+    "substrates": {
+      "anode": "FeCoNiCuMo/NM (nickel mesh)",
+      "cathode": "FeCoNiCuMo/CP (carbon paper)"
+    },
+    "areal_loading_mg_cm2": {
+      "FeCoNiCuMo_NM": 12,
+      "FeCoNiCuMo_CP": 3
+    }
+  },
+
+  "synthesis": {
+    "method": "pulse electrodeposition in aqueous solution",
+
+    "precursors": [
+      "FeCl3",
+      "CoCl2·6H2O",
+      "NiCl2·6H2O",
+      "CuCl2·2H2O",
+      "Na2MoO4·2H2O",
+      "sodium citrate (additive)",
+      "sodium dodecyl sulfate (0.2 g L⁻¹ surfactant)"
+    ],
+
+    "electroplating_solution": {
+      "solvent": "DI water",
+      "pH": 9.3 (adjusted with NH3·H2O),
+      "total_volume_mL": 100
+    },
+
+    "deposition_conditions": {
+      "temperature_K": 328.15,
+      "mode": "pulsed",
+      "on_time_ms": 0.2,
+      "off_time_ms": 0.8,
+      "current_density_A_cm2": -0.75,
+      "counter_electrode": "graphite rod",
+      "deposition_time_s": {
+        "anode_NM": 9999,
+        "cathode_CP": 400
+      }
+    }
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "phase": "FCC",
+      "evidence": "single solid-solution phase"
+    },
+
+    "HRTEM": {
+      "lattice_spacings_nm": {
+        "(111)": 0.211,
+        "(200)": 0.193
+      },
+      "particle_morphology": "stacked nanoparticles"
+    },
+
+    "SEM": {
+      "morphology": "stacked nanoparticles uniformly coating NM or CP",
+      "distribution": "uniform deposition across substrates"
+    },
+
+    "STEM_EDX_maps": "five elements uniformly distributed at tens-of-nanometers scale",
+
+    "XPS": {
+      "detected_states": {
+        "Fe": ["Fe⁰", "Fe²⁺", "Fe³⁺"],
+        "Co": ["Co⁰", "Co²⁺ (CoO, Co(OH)₂)"],
+        "Ni": ["Ni⁰", "Ni²⁺", "Ni³⁺"],
+        "Cu": ["Cu⁰", "Cu²⁺"],
+        "Mo": ["Mo⁰", "Mo⁴⁺", "Mo⁶⁺"]
+      },
+      "note": "Ar⁺ sputtering used to reduce surface oxides"
+    },
+
+    "XAS_EXAFS": {
+      "finding": "metallic states for all five elements; Mo shows partial oxidation",
+      "Mo_O_signals": ["MoO₂", "MoO₃"]
+    }
+  },
+
+  "electrochemical_performance": {
+    "reactions": ["OER", "HER"],
+    "electrolyte": "1 M KOH (aq)",
+
+    "overpotential_mV_at_10_mA_cm2": {
+      "OER": {
+        "FeCoNiCuMo_NM": 241,
+        "FeCoNiCuMo_CP": 258,
+        "IrO2_NM": 305,
+        "NM": 339,
+        "CP": 458
+      },
+      "HER": {
+        "FeCoNiCuMo_NM": 27,
+        "FeCoNiCuMo_CP": 63,
+        "Pt_C_CP": 34,
+        "NM": 330,
+        "CP": 375
+      }
+    },
+
+    "Tafel_slope_mV_dec": {
+      "OER": {
+        "FeCoNiCuMo_NM": 30.6,
+        "IrO2_NM": 54.2,
+        "FeCoNiCuMo_CP": 73.4
+      },
+      "HER": {
+        "FeCoNiCuMo_NM": 40.5,
+        "Pt_C_CP": 31.4,
+        "FeCoNiCuMo_CP": 67.7
+      }
+    },
+
+    "ECSA_Cdl_mF_cm2": {
+      "FeCoNiCuMo_NM": 8.09,
+      "FeCoNiCuMo_CP": 4.17
+    },
+
+    "charge_transfer_resistance_Ohm": {
+      "FeCoNiCuMo_NM": {
+        "OER_Rct": 0.12,
+        "HER_Rct": 0.22
+      }
+    },
+
+    "stability_half_cell": {
+      "OER_100mA_cm2_100h": {
+        "FeCoNiCuMo_NM": "potential increase 0.235%"
+      },
+      "HER_100mA_cm2_100h": {
+        "FeCoNiCuMo_CP": "potential increase 7.84%"
+      },
+      "post_test_structure": "FCC preserved; elemental distribution uniform"
+    },
+
+    "Faradaic_efficiency": "≈100% for both OER and HER"
+  },
+
+  "AEMWE_performance": {
+    "operating_conditions": {
+      "electrolyte": "1 M KOH (anode feed)",
+      "temperature_K": 323.15,
+      "flow_rate_mL_min": 30
+    },
+
+    "MEA_configurations": [
+      "HEA/NM–AEM–HEA/CP",
+      "HEA/CP–AEM–HEA/CP",
+      "HEA/NM–AEM–HEA/NM"
+    ],
+
+    "current_density_mA_cm2_at_2V": {
+      "HEA_NM_AEM_HEA_CP": 1618,
+      "HEA_CP_AEM_HEA_CP": 1456,
+      "HEA_NM_AEM_HEA_NM": 599
+    },
+
+    "HFR_Ohm": {
+      "HEA_CP_AEM_HEA_CP": 0.12,
+      "HEA_NM_AEM_HEA_CP": 0.16,
+      "HEA_NM_AEM_HEA_NM": 0.20
+    },
+
+    "AEM_LDH_composite": {
+      "additive": "NiFe LDH grown in FAA-3–50 membrane",
+      "method": "sequential immersion in Ni²⁺/Fe²⁺ solution + KOH",
+      "electrolyte_uptake_percent": {
+        "AEM": 147,
+        "AEM_LDH": 219
+      },
+
+      "AEMWE_with_LDH": {
+        "HEA_NM_AEM_LDH_HEA_CP_current_at_2V_mA_cm2": 1777,
+        "stability_100h_100mA_cm2": "voltage increase 0.0951%"
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "literature_id": "HEA-json25",
+  "doi": "10.1039/d2ee03185j",
+
+  "HEA_composition": {
+    "catalyst_name": "FeCoNiCuMn HEA/CNFs",
+    "elements": ["Fe", "Co", "Ni", "Cu", "Mn"],
+    "composition": "near-equimolar (ICP-OES, EDX and XPS consistent; ΔS ≥ 1.50R)",
+    "support": "PAN-derived carbon nanofibers (CNFs)",
+    "crystal_structure": "FCC single solid solution",
+    "average_particle_size_nm": "12.9 ± 6.6",
+    "structure_note": "core–shell-like HEA@carbon confined by turbostratic graphitic CNFs"
+  },
+
+  "synthesis": {
+    "method": "polymer fiber nanoreactor + electrospinning + pyrolysis",
+
+    "steps": {
+      "precursor_solution": "five metal salts homogeneously dissolved in PAN/DMF",
+      "electrospinning": "metal-precursor/PAN nanofibrous membrane formed",
+      "pre_oxidation": {
+        "temperature_K": 473,
+        "purpose": "metal salt decomposition + PAN cyclization"
+      },
+      "graphitization": {
+        "temperature_K": 1273,
+        "heating_rate_K_min": 20,
+        "cooling_rate_K_min": 20,
+        "outcome": "HEA NPs confined by turbostratic graphitic carbon nanofibers (CNFs)"
+      }
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM_HAADF": {
+      "morphology": "quasi-spherical nanoparticles uniformly anchored on CNFs",
+      "aggregation": "negligible",
+      "lattice_spacing_A": 2.2,
+      "assigned_plane": "(111) of FCC",
+      "FFT": "confirms FCC phase"
+    },
+
+    "STEM_EDX": {
+      "result": "atomic-scale uniform distribution of Fe, Co, Ni, Cu, Mn; no phase segregation"
+    },
+
+    "XRD": {
+      "phase": "single FCC solid solution",
+      "peaks_2theta_deg": ["43.2 (111)", "50.2 (200)"]
+    },
+
+    "XPS": {
+      "metallic_states": "dominant for all five elements with minor surface oxidation",
+      "electron_transfer_trend": {
+        "Ni_Cu": "negative BE shift (electron-enriched)",
+        "Mn_Fe_Co": "positive BE shift (electron-deficient)"
+      }
+    },
+
+    "XAFS_XANES_EXAFS": {
+      "XANES": "all elements metallic; Co/Fe edges shift positively, Ni shifts negatively",
+      "EXAFS_first_shell_M_M_A": {
+        "Ni": 2.04,
+        "Co": 2.17,
+        "Fe": 2.17
+      },
+      "coordination": "lower than metal foils → nanoparticle nature"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reactions": ["HER", "OER"],
+    "electrolyte": "1 M KOH (aq)",
+    "electrode_format": "self-supported HEA/CNF (1 × 1 cm²)",
+
+    "HER": {
+      "overpotential_mV_at_100mA_cm2": {
+        "FeCoNiCuMn_HEA_CNF": 281,
+        "commercial_Pt_C": 302
+      },
+      "Tafel_slope_mV_dec": 53,
+      "ECSA_normalized_overpotential_mV_at_0_5mA_cm2": 321,
+      "current_density_mA_cm2_at_500mV": 921,
+      "charge_transfer_resistance_ohm": 9,
+      "TOF_s_1_at_500mV": 3.2
+    },
+
+    "OER": {
+      "overpotential_mV_at_200mA_cm2": 386,
+      "ECSA_normalized_overpotential_mV_at_0_5mA_cm2": 383,
+      "TOF_s_1_at_1_7V": 4.2
+    },
+
+    "stability": {
+      "chronoamperometry": {
+        "HER_current_mA_cm2": -170,
+        "OER_current_mA_cm2": 230,
+        "duration_h": ">20"
+      },
+      "overall_water_splitting": {
+        "cell_configuration": "HEA/CNF || HEA/CNF",
+        "voltage_V_at_50mA_cm2": 1.61,
+        "PtC_IrO2_reference_V": 1.91,
+        "long_term_30h": "slight current loss (~200 mA cm²); structure preserved"
+      }
+    }
+  },
+
+  "theoretical_computations": {
+    "model": "FCC FeCoNiCuMn HEA with ICP-based composition",
+
+    "electronic_structure": {
+      "d_band_center_eV": {
+        "Cu": -2.27,
+        "Fe": -1.91,
+        "Co":- 2.10,
+        "Ni": -1.85,
+        "Mn": -1.21
+      }
+    },
+
+    "HER_thermodynamics": {
+      "DGH_star_eV": {
+        "Cu":- 0.085,
+        "Ni":- 0.148,
+        "Fe": -0.214,
+        "Co":- 0.33,
+        "Mn": -0.374
+      },
+      "water_dissociation_barrier_eV": {
+        "Cu": 0.54,
+        "Ni": 0.68,
+        "Fe": 0.75,
+        "Co": 0.91,
+        "Mn": 0.97
+      },
+      "mechanism": "Volmer–Heyrovsky; Cu sites show lowest barriers"
+    },
+
+    "OER_thermodynamics": {
+      "RDS_barrier_eV_for_OH_to_O": {
+        "Cu": 1.57,
+        "Fe": 1.68,
+        "Ni": 1.89,
+        "Co": 2.01,
+        "Mn": 2.42
+      }
+    },
+
+    "mechanistic_conclusion": [
+      "electronegativity differences drive local electron redistribution",
+      "Cu becomes electron-enriched active site for both HER and OER",
+      "reduced adsorption energies of intermediates improve activity"
+    ]
+  }
+}

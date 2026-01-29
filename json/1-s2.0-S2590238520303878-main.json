@@ -1,0 +1,105 @@
+{
+  "literature_id": "HEA-json19",
+  "doi": "10.1016/j.matt.2020.07.029",
+
+  "HEA_composition": {
+    "model_system": "IrPdPtRhRu equimolar HEA",
+    "elements": ["Ir", "Pd", "Pt", "Rh", "Ru"],
+    "composition": "equimolar",
+    "crystal_structure": "FCC (theoretical slabs)",
+    "surfaces_considered": ["(111)", "(100)", "(110)", "(211)", "(532)"],
+    "active_site_type": "bridge sites only",
+    "coordination_environments": 12
+  },
+
+  "theoretical_computations": {
+    "reaction_considered": "ORR descriptor — OH* adsorption",
+
+    "DFT_settings": {
+      "code": "VASP",
+      "functional": "PBE-GGA",
+      "spin_polarized": true,
+      "cutoff_energy_eV": 500,
+      "fermi_smearing_eV": 0.1,
+      "vdW_correction": "tested with DFT-D3; negligible and not used",
+      "supercell": "at least 64 atoms",
+      "k_points": "2×2×1",
+      "force_tolerance_eV_per_A": 0.02,
+      "lateral_dimension_A": "≥ 10",
+      "vacuum_thickness_A": "≥ 10",
+      "slab_layers": 4,
+      "bottom_layers_fixed": 2,
+      "lattice_constant": "Vegard’s law (average of five monometals)"
+    },
+
+    "adsorption_energy_definition": {
+      "equation": "ΔE_OH = E_OH + 0.5E_H2 − E_surface − E_H2O",
+      "reference_form": "ΔE_OH − ΔE_OH,Pt(111) used throughout"
+    },
+
+    "dataset": {
+      "HEA_sites": 1177,
+      "bimetallic_sites": 193,
+      "total_sites": 1370
+    },
+
+    "neural_network_model": {
+      "architecture": "atom-wise dense layer + reduce-sum",
+      "parameters": 36,
+      "optimizer": "Adam",
+      "learning_rate": 1e-4,
+      "max_epochs": 3000,
+      "training_testing_split_main": "50%/50%",
+      "performance": {
+        "MAE_eV": 0.094,
+        "RMSE_eV": 0.117
+      },
+      "extrapolation_tests": {
+        "train_(100)+(211)_test_others_MAE_eV": 0.144,
+        "train_HEA_test_bimetallic_MAE_eV": 0.092
+      }
+    },
+
+    "ligand_effect_findings": {
+      "X_X_order": "Ru–Ru < Rh–Rh < Ir–Ir < Pd–Pd < Pt–Pt",
+      "mixed_pair_rule": "X–Y ≈ average of X–X and Y–Y",
+      "dominant_factors": "two bridge-site atoms dominate adsorption energy",
+      "nearest_neighbor_variation_eV": {
+        "due_to_element": "≈ 0.02",
+        "due_to_CN": "≈ 0.12"
+      }
+    },
+
+    "coordination_effect_findings": {
+      "trend": "higher coordination → weaker OH* binding",
+      "linearity": "mean ΔE_OH correlates linearly with total CN of nearest neighbors",
+      "special_site": "9–10 (211) overcoordinated site shows weakest binding",
+      "design_implication": "concave/cavity structures may enhance ORR activity"
+    },
+
+    "atom_contribution_analysis": {
+      "active_site_contribution_eV_per_atom": "~1.0",
+      "nearest_neighbor_contribution_eV_per_atom": "< 0.1",
+      "collective_effect": "many neighbors make total effect comparable to active sites"
+    },
+
+    "linear_scaling_model": {
+      "form": "ΔE_OH − ΔE_OH,Pt(111) = E0 + Σ(a_i·CN_i) + Σ(b_j·CN_j)",
+      "testing_MAE_eV": 0.13,
+      "testing_RMSE_eV": 0.16,
+      "fitted_parameters_eV": {
+        "E0": -3.416,
+        "a_Ru": 0.425,
+        "a_Rh": 0.732,
+        "a_Pd": 1.070,
+        "a_Ir": 0.753,
+        "a_Pt": 1.109,
+        "b_Ru": 0.157,
+        "b_Rh": 0.145,
+        "b_Pd": 0.140,
+        "b_Ir": 0.165,
+        "b_Pt": 0.141
+      }
+    }
+  }
+}

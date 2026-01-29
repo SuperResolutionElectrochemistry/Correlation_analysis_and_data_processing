@@ -1,0 +1,67 @@
+{
+  "literature_id": "HEA-json20",
+  "doi": "10.1021/acscatal.2c03675",
+
+  "HEA_composition": {
+    "model_system": "FeCoNiCuMo equimolar HEA",
+    "elements": ["Fe", "Co", "Ni", "Cu", "Mo"],
+    "composition": "Fe0.2Co0.2Ni0.2Cu0.2Mo0.2",
+    "crystal_structure": "FCC",
+    "surface_used": "HEA (111)"
+  },
+
+  "physicochemical_characterization": {
+    "surface_models": {
+      "generation_method": "Neural Evolution Structure (NES)",
+      "total_structures_generated": 200,
+      "structures_used_for_DFT": 20
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "CO2 Reduction Reaction (CO2RR)",
+    "approach": "DFT free-energy analysis",
+    "potential_limiting_step_V_vs_RHE": {
+      "AS1": 0.37,
+      "AS2": 0.51,
+      "AS3": 0.29
+    },
+    "rotation_barriers_eV": {
+      "COOH_rotation": [0.74, 0.17],
+      "CHO_rotation": [0.73, 0.23]
+    }
+  },
+
+  "theoretical_computations": {
+    "DFT_code": "VASP (PBE-GGA, PAW, spin-polarized)",
+    "dataset": {
+      "total_adsorption_sites": 1280,
+      "CO_sites": 320,
+      "COOH_sites": 480,
+      "CHO_sites": 480
+    },
+    "intermediates_considered": ["COOH*", "CO*", "CHO*", "COH*"],
+    "ML_models": {
+      "type": "three neural networks (separate for CO, COOH, CHO)",
+      "descriptors": ["group number", "period number", "electronegativity", "Nie-d"],
+      "input_structure": "1 top atom + 9 nearest neighbors",
+      "architecture": "single hidden layer (6 nodes, tanh) + reduced sum pooling",
+      "optimizer": "Adam",
+      "epochs": 3000,
+      "MAE_eV": {
+        "COOH": 0.068,
+        "CO": 0.095,
+        "CHO": 0.095
+      }
+    },
+    "mechanistic_findings": {
+      "scaling_relation": "broken between ΔE_CO* and ΔE_COOH*/ΔE_CHO*",
+      "neighbor_effects": {
+        "Mo_neighbor": "stabilizes O-containing intermediates",
+        "Cu_neighbor": "destabilizes O-containing intermediates"
+      },
+      "LDOS_trend": "Mo-d states closer to Fermi level than Cu-d states",
+      "rate_determining_step_AS1": "CHO* + H+ + e- → CHOH*"
+    }
+  }
+}

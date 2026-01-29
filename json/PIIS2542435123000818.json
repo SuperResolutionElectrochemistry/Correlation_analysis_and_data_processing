@@ -1,0 +1,102 @@
+{
+  "literature_id": "HEA-json26",
+  "doi": "10.1016/j.joule.2023.02.011",
+
+  "HEA_composition": {
+    "catalyst_name": "PtPdFeCoNiSnMn HEA",
+    "elements": ["Pt", "Pd", "Fe", "Co", "Ni", "Sn", "Mn"],
+    "type": "septenary high-entropy alloy",
+    "structure": "single-phase FCC solid solution",
+    "surface_characteristic": "PtPd-rich surface",
+    "atomic_fraction_range_at_percent": "7–25 at.% for each element (ICP-MS and XPS)",
+    "support": "Vulcan XC-72 carbon",
+    "PGM_loading_mg_cm2": 0.12
+  },
+
+  "synthesis": {
+    "method": "one-step solvothermal synthesis followed by thermal annealing",
+    "post_treatment": "thermal annealing to form PtPd-rich surface",
+    "note": "exact precursor chemical formulas, solvent composition, reaction temperature, time, and atmosphere are not explicitly specified in the main text"
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "phase": "FCC (Fm-3m)",
+      "feature": "diffraction peaks located between Pt and Pd, indicating lattice distortion"
+    },
+
+    "STEM_HAADF": {
+      "morphology": "closely connected nanostructure",
+      "lattice_plane": "(111)",
+      "lattice_spacing_A": 2.25
+    },
+
+    "STEM_EDS": {
+      "element_distribution": "random but uniform distribution of all seven elements"
+    },
+
+    "XPS": {
+      "surface_enrichment": "Pt and Pd surface concentration higher than bulk",
+      "Pt_4f_shift": "negative shift (~0.8 eV) relative to Pt/C",
+      "Pd_3d_shift": "negative shift (~0.3 eV) relative to Pd/C",
+      "non_PGM_elements": "positive binding-energy shifts, slightly oxidized surface",
+      "interpretation": "electron transfer from non-PGM elements to Pt/Pd"
+    }
+  },
+
+  "electrochemical_performance": {
+    "EOR": {
+      "electrolyte": "1.0 M KOH + 1.0 M ethanol",
+      "onset_potential_V_vs_RHE": 0.255,
+      "peak_potential_V_vs_RHE": 0.77,
+      "mass_activity_A_mgPGMs": 24.3,
+      "specific_activity_mA_cm2": 21.2,
+      "potential_for_activity_reference_V": 0.81,
+      "stability_cycles": {
+        "30000_cycles_retention_percent": 99.9,
+        "50000_cycles_retention_percent": 99.7
+      },
+      "faradaic_efficiency_CO2_percent": ">92",
+      "reaction_pathway": "complete 12-electron EOR"
+    },
+
+    "ORR": {
+      "electrolyte": "0.1 M KOH",
+      "half_wave_potential_E1_2_V_vs_RHE": 0.95,
+      "onset_potential_E0_V_vs_RHE": 1.07,
+      "mass_activity_A_mgPGMs_at_0_9V": 17.7,
+      "specific_activity_mA_cm2_at_0_9V": 15.5,
+      "Tafel_slope_mV_dec": 51,
+      "electron_transfer_number": "~4",
+      "H2O2_yield_percent": "<0.3",
+      "stability_cycles": {
+        "100000_cycles_E1_2_shift_mV": 5
+      }
+    },
+
+    "DEFC_performance": {
+      "cell_temperature_C": 60,
+      "maximum_power_density_W_cm2": 0.72,
+      "current_density_at_MPD_A_cm2": 1.3,
+      "OCV_V": 1.07,
+      "operation_time_h": 1200
+    }
+  },
+
+  "theoretical_computations": {
+    "methods": "DFT calculations",
+    "surface_model": "PtPd-rich HEA (111) surface",
+    "key_findings": {
+      "CO_adsorption": "weaker on Pt/Pd sites in HEA than on Pt(111) and Pd(111)",
+      "water_adsorption": "Fe, Co, Mn preferentially adsorb H2O and generate OH*",
+      "C_C_bond_cleavage_barrier_eV": {
+        "Pt_site_HEA": 0.16,
+        "Pt_111": 0.20,
+        "Pd_site_HEA": 0.52,
+        "Pd_111": 1.29
+      },
+      "ethanol_adsorption": "moderate adsorption strength on Pt/Pd sites in HEA",
+      "mechanistic_conclusion": "synergistic multi-element effects enable complete 12e EOR and enhanced ORR"
+    }
+  }
+}

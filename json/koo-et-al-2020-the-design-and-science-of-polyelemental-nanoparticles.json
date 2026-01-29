@@ -1,0 +1,105 @@
+{
+  "literature_id": "HEA-json21",
+  "doi": "10.1021/acsnano.0c03993",
+
+  "scope_of_article": {
+    "type": "Perspective review on polyelemental nanoparticles (PE NPs)",
+    "definition": "nanoparticles containing four or more elements in a single particle",
+    "structures_discussed": [
+      "metallic glass (amorphous)",
+      "single-phase alloy",
+      "intermetallic compound",
+      "multiphase",
+      "core–shell"
+    ]
+  },
+
+  "synthesis_methods_reviewed": {
+    "SPBCL_multiphase_control": {
+      "method_name": "Scanning Probe Block Copolymer Lithography (SPBCL)",
+      "template": "PEO-b-P2VP block copolymer nanoreactors patterned by dip-pen nanolithography",
+      "key_steps": [
+        "patterning metal-salt-loaded polymer hemispheres on substrate",
+        "two-step calcination",
+        "nucleation of many metal nanoparticles inside each nanoreactor",
+        "coarsening into a single PE nanoparticle"
+      ],
+      "size_scale_nm": "tens of nanometers",
+      "representative_libraries": [
+        "Au–Ag–Cu–Co–Ni quinary system"
+      ],
+      "example_structures": [
+        "AuAg/AuCu/CoNi three-layer structure",
+        "Au/Co/Pd3Sn triphase fan-shaped structure"
+      ],
+      "design_principle": "heterostructures minimize total surface and interfacial energy"
+    },
+
+    "carbothermal_shock_HEA": {
+      "method_name": "Rapid carbothermal shock (Joule heating)",
+      "support": "metal-salt-coated carbon nanofiber matrix",
+      "atmosphere": "argon",
+      "peak_temperature_K": 2000,
+      "pulse_duration_ms": 55,
+      "heating_rate_K_per_s": "≈ 1×10^5",
+      "cooling_rate_K_per_s": "≈ 1×10^5",
+      "mechanism": [
+        "liquid-metal fusion–fission cycles during heating",
+        "fast quenching suppresses phase separation"
+      ],
+      "element_range_demonstrated": "up to octonary systems",
+      "representative_compositions": [
+        "PtCoNiFeCu (quinary)",
+        "PtPdCoNiFe (quinary)",
+        "PtCoNiFeCuAu (senary)",
+        "PtPdCoNiFeCuAu (septenary)",
+        "PtPdCoNiFeCuAuSn (octonary)"
+      ],
+      "structure_outcome": "single-crystalline FCC with homogeneous elemental distribution",
+      "particle_size_control": "tens of nanometers; reducible to few nanometers on defective carbon"
+    },
+
+    "electrochemical_shock_HEMG": {
+      "method_name": "Nanodroplet-mediated electrochemical shock",
+      "electrolyte_format": "water-in-oil emulsion droplets containing metal salts",
+      "applied_potential_V_vs_AgAgCl": -1.5,
+      "timescale_ms": "≈ 100",
+      "nucleation_mode": "localized reduction within single nanodroplets",
+      "outcome": "high-entropy metallic glass nanoparticles (amorphous)",
+      "size_scale_nm": "≈ 500",
+      "representative_compositions": [
+        "CoCrMnNiV (quinary)",
+        "CoCuCrGdNi (quinary)",
+        "CoCrLaMnNiV (senary)",
+        "CoCrCuGdMnNiV (septenary)",
+        "CoCrCuGdInMnNiV (octonary)",
+        "CoFeNiLaPt (quinary)"
+      ]
+    },
+
+    "forced_metal_exchange": {
+      "strategy": "stepwise metal exchange on preformed M29 nanoclusters",
+      "template_cluster": "M29(S-Adm)18(PPh3)4",
+      "possible_metals": ["Ag", "Cu", "Au", "Pt", "Pd"],
+      "example_core_shell": "Pt1@Ag12@Cu12@Au4"
+    }
+  },
+
+  "representative_applications_reported": {
+    "ammonia_oxidation_catalysis": {
+      "catalyst": "quinary PtPdRhRuCe HEA nanoparticles (carbothermal shock)",
+      "temperature_K": 973,
+      "performance": {
+        "NH3_conversion_percent": "≈100",
+        "NOx_selectivity_percent": "≈99"
+      },
+      "comparison": "conventional multiphase quinary NPs showed ~18.7% NOx selectivity"
+    },
+
+    "ammonia_decomposition": {
+      "catalyst": "non-precious HEA (Co–Mo–Fe–Ni–Cu)",
+      "finding": "≈20× improvement in activity and stability vs Ru NPs and Co–Mo bimetallic NPs",
+      "key_parameter": "Co/Mo molar ratio controls N adsorption energy"
+    }
+  }
+}
