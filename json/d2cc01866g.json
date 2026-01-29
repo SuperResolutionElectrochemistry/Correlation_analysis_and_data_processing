@@ -1,0 +1,67 @@
+{
+  "literature_id": "HEA-json2",
+  "doi": "10.1039/d2cc01866g",
+
+  "HEA_composition": {
+    "catalyst_name": "PtRhPdIrRu alloy NPs",
+    "elements": ["Pt", "Rh", "Pd", "Ir", "Ru"],
+    "composition": "slightly deviated from equimolar (approx. 6:1:1:1:1 for each metal)",
+    "crystal_structure": "FCC (solid solution)",
+    "average_particle_size_nm": "3.6–4.6 nm (except Ir-rich)",
+    "support": "Vulcan XC-72 carbon (20 wt%)"
+  },
+
+  "synthesis": {
+    "method": "one-pot polyol method",
+    "precursors": "Five metal precursors (exact amounts given in Table S1, ESI)",
+    "solution": {
+      "solvent": "15 mL of 0.1 M HCl (aq), 5 mL isopropanol",
+      "dispersion_method": "sprayed onto carbon support"
+    },
+    "reaction_conditions": {
+      "temperature_K": 493.15,
+      "reaction_time": "no specific time mentioned; rapid heating under 220°C",
+      "post_synthesis": "washed and vacuum-dried at RT",
+      "hydrogen_treatment_K": 473.15
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "3.6–4.6 nm (except for Ir-rich alloy NPs, 3.0 ± 0.7 nm)",
+      "dispersion": "well dispersed on carbon support"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_constants_A": {
+        "Ru": 3.80,
+        "Rh": 3.82,
+        "Ir": 3.84,
+        "Pd": 3.89,
+        "Pt": 3.92
+      },
+      "Vegard_law_observation": "Lattice constant increases linearly with metal composition"
+    },
+    "XPS": {
+      "metal_states": "Ru 3d5/2, Rh 3d5/2, Pd 3d5/2, Ir 4f7/2, Pt 4f7/2",
+      "composition_consistency": "Surface and bulk compositions match, confirming solid-solution structure"
+    },
+    "HAXPES": {
+      "VB_spectrum": "Broad and featureless VB spectra, fewer features than monometallic NPs",
+      "d_band_center_range_eV": "-4.142 to -3.922 (alloy NPs), -4.294 to -3.443 (monometallic NPs)"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "HER",
+    "electrolyte": "1 M HClO4 (aq)",
+    "overpotential_mV": {
+       "Pt_rich": "~10",
+      "equimolar": "~14",
+      "commercial_Pt_C": "~34"
+    },
+  "TOF_calculation": "based on Cu underpotential deposition (Fig. 4c)",
+    "activity_trend": "Pt-rich > equimolar > Ru-rich",
+    "d_band_correlation": "No clear correlation between d-band center and HER activity observed"
+   }
+}

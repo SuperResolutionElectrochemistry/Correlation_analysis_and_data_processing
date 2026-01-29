@@ -1,0 +1,124 @@
+{
+  "literature_id": "HEA-json1",
+  "doi": "10.1002/adma.202304867",
+
+  "HEA_composition": {
+    "catalyst_name": "PtIrNiCoFeZn-HEA@MWCNT",
+    "elements": ["Pt", "Ir", "Ni", "Co", "Fe", "Zn"],
+    "crystal_structure": "FCC",
+    "support": "multiwall carbon nanotubes (MWCNTs)",
+    "loading_mg_cm2": 0.28,
+
+    "Zn_role": "used as a sacrificial component to create lattice disorder through evaporation"
+  },
+
+  "synthesis": {
+    "strategy": "laser irradiation + thermal dezincification",
+
+    "precursors": [
+      "H2PtCl6·xH2O",
+      "IrCl3·xH2O",
+      "NiCl2·6H2O",
+      "CoCl2·6H2O",
+      "FeCl2·4H2O",
+      "ZnCl2·2H2O"
+    ],
+
+    "solution": {
+      "solvent": "anhydrous ethanol",
+      "total_metal_concentration_mmol_L": 50,
+      "loading_volume_uL_cm2": 100
+    },
+
+    "laser_conditions": {
+      "scan_rate_mm_s": 40,
+      "power_W": 1,
+      "frequency_kHz": 900,
+      "pulse_width_ns": 2,
+      "atmosphere": "N2",
+      "duration": "millisecond-scale transient heating"
+    },
+"mechanism": [
+      "rapid local heating by laser",
+      "Zn evaporates (<900 °C boiling point)",
+      "creates vacancies and lattice disorder",
+      "freezes a disordered FCC HEA structure"
+    ]
+  },
+
+ "physicochemical_characterization": {
+    "FESEM": {
+      "morphology": "nanoparticles uniformly dispersed over MWCNT surface",
+      "particle_size_nm": "<10 (estimated from FESEM figure)"
+    },
+    "STEM_HAADF": {
+      "dispersion": "nanoparticles evenly decorated over MWCNT surface",
+      "average_size_nm": "8.33 (from size distribution in Figure S9b, Supporting Information)"
+    },
+    "lattice_disorder_evidence": {
+      "STEM_observation": "highly disordered atomic lattice in PtIrNiCoFeZn nanoparticle",
+      "TDS": "strong background with high intensity around transmitted spot attributed to thermal diffusion scattering (TDS), interpreted as lattice disorder/vacancies"
+    },
+    "XPS": {
+      "valence_state": "high-resolution spectra indicate nanoparticles are not oxidized (Figures S13–S14)"
+    },
+    "ICP_MS": {
+      "composition_statement": "all elements meet HEA atomic-percentage definition; Zn has the lowest content due to depletion during synthesis"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "HER",
+    "electrolyte": "1 M KOH",
+    "reference_scale": "RHE",
+
+    "overpotential_mV": {
+      "at_10_mA_cm2": 10,
+      "at_100_mA_cm2": 55
+    },
+
+    "Tafel_slope_mV_dec": 16.90,
+
+    "EIS": "lowest charge-transfer resistance among all samples",
+
+    "double_layer_capacitance_mF_cm2": 170,
+
+    "TOF_s_1": 0.1952,
+
+    "mass_activity_mA_mg": {
+      "note": "≈3× commercial Pt/C under identical conditions"
+    },
+
+    "stability": {
+      "current_density_mA_cm2": 100,
+      "time_h": 50,
+      "overpotential_increase_mV": 5,
+      "post_test_XRD": "FCC preserved",
+      "post_test_STEM": "lattice disorder maintained",
+      "post_test_ICP": "negligible metal dissolution"
+    }
+  },
+
+  "theoretical_calculation": {
+    "active_sites": ["Pt site", "Zn site"],
+
+    "Volmer_step": {
+      "Pt_site": {
+        "ΔG_H2O_V_eV": 0.427,
+        "ΔG_H_eV": -0.038
+      },
+      "Zn_site": {
+        "ΔG_H2O_V_eV": 0.2895,
+        "ΔG_H_eV": 0.3746
+      }
+    },
+
+    "Tafel_step": "vacancies reduce H–H recombination barrier",
+
+    "TDOS_effect": "vacancies increase total DOS near Fermi level",
+
+    "d_band_center": "not explicitly reported in the paper",
+
+    "reaction_pathway": "Volmer–Tafel mechanism enhanced by vacancy engineering"
+  }
+}

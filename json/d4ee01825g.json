@@ -1,0 +1,77 @@
+{
+  "literature_id": "HEA-json3",
+  "doi": "10.1039/d4ee01825g",
+
+  "HEA_composition": {
+    "catalyst_name": "PtRuMoFeCoNi HEA-QDs",
+    "elements": ["Pt", "Ru", "Mo", "Fe", "Co", "Ni"],
+    "composition": "The atomic ratio of Pt:Ru:Mo:Fe:Co:Ni is 17.3:17.0:17.4:16.0:5.9:8.1",
+    "crystal_structure": "FCC (solid solution)",
+    "average_particle_size_nm": "ca. 1.9 nm",
+    "support": "Vulcan XC-72R carbon (100 mg PtRu cm⁻²)"
+  },
+
+  "synthesis": {
+    "method": "Microwave-polyol method",
+    "precursors": "No specific precursors or their exact amounts were mentioned",
+    "solution": {
+      "solvent": "Triethylene glycol (TEG)",
+      "temperature_C": 230,
+      "reaction_time_s": 80,
+      "dispersant": "TEG stabilizes the HEA-QDs and prevents uncontrolled enlargement"
+    },
+    "reaction_conditions": {
+      "temperature_K": 503.15,
+      "reaction_time": "80 s",
+      "post_synthesis": "washed and vacuum-dried at room temperature",
+      "hydrogen_treatment_K": 473.15
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "ca. 1.9 nm",
+      "dispersion": "well dispersed on carbon support"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_constants_A": {
+        "note": "Lattice constant of HEA-QDs is between Pt (3.92 Å) and Ru (3.80 Å), consistent with Vegard's law"
+      },
+      "Vegard_law_observation": "Lattice constant increases linearly with metal composition"
+    },
+    "XPS": {
+      "metal_states": "Pt0 4f, Ru0 3p, Mo, Fe, Co, Ni",
+      "composition_consistency": "Surface and bulk compositions match"
+    },
+    "HAXPES": {
+      "VB_spectrum": "Broad and featureless, consistent with multielement composition"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "HER",
+    "electrolyte": "0.5 M H2SO4",
+    "overpotential_mV": {
+      "at_10_mA_cm2": 11,
+      "at_100_mA_cm2": 102
+    },
+    "comparison_overpotential_mV": {
+      "Pt/C": {
+        "10_mA_cm2": 18,
+        "100_mA_cm2": 127
+      },
+      "Ru/C": {
+        "10_mA_cm2": 45,
+        "100_mA_cm2": ">200"
+      },
+      "PtRu/C": {
+        "10_mA_cm2": 16,
+        "100_mA_cm2": 134
+      }
+    },
+    "Tafel_slope_mV_dec": 28.7,
+  },
+    "reaction_mechanism": "The enhanced electron density from the surrounding metals (Fe, Co, Ni, Mo) weakens the H adsorption strength, thereby improving Tafel kinetics."
+  }
+}

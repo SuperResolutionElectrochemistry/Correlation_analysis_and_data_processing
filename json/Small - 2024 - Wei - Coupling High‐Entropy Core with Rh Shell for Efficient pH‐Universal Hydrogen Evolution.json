@@ -1,0 +1,69 @@
+{
+  "literature_id": "HEA-json5",
+  "doi": "10.1002/smll.202403353",
+
+  "HEA_composition": {
+    "catalyst_name": "PtCoNiMoRh@Rh",
+    "elements": ["Pt", "Co", "Ni", "Mo", "Rh"],
+    "atomic_ratio_Pt/Co/Ni/Mo/Rh": "31/8/30/5/26",
+    "structure": "Core-shell (PtCoNiMoRh core with Rh shell)",
+    "crystal_structure": "FCC (core-shell structure)",
+    "average_particle_size_nm": 5.71
+  },
+
+  "synthesis": {
+    "method": "One-step wet chemical method",
+    "precursors": "Pt, Co, Ni, Rh precursors and Mo(CO)₆, using oleylamine (OAm) as reducing agent and solvent",
+    "reaction_conditions": {
+      "temperature_K": "not specified",
+      "reaction_time_h": 1,
+      "post_synthesis": "Nanoparticles were washed and vacuum-dried at room temperature"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "5.71 nm",
+      "dispersion": "Core-shell structure with Rh shell"
+    },
+   "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_spacing_shell_Rh_200_nm": 0.212,
+      "lattice_strain_shell_vs_metallic_Rh_%": 10.9,
+      "note": "Core lattice constant not explicitly given"
+    },
+    "XPS": {
+      "elements_analyzed": ["Pt", "Co", "Ni", "Mo", "Rh"],
+      "peak_shift": "Binding energy shifts for Co, Ni, Mo, and Rh due to alloying"
+    },
+    "HAADF-STEM": "Core-shell structure with PtCoNiMoRh core and Rh shell",
+    "EDX_maps": "Elemental distribution for Pt, Co, Ni, Mo, and Rh is homogeneous"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "HER",
+    "electrolyte": "pH-universal: Acidic (1 M HClO4), Neutral, and Alkaline",
+    "overpotential_mV": {
+      "at_10_mA_cm2": {
+        "acidic": 9.1,
+        "neutral": 24.9,
+        "alkaline": 17.1
+      }
+    },
+    "mass_activity_enhancement_vs_Rh_C_times": {
+      "acidic": 5.8,
+      "neutral": 2.79,
+      "alkaline": 91.8
+    },
+    "Tafel_slope_mV_dec": {
+      "acidic": 24.0,
+      "neutral": "14.4 (Figure S12, Supporting Information)",
+      "alkaline": "30.0 (Figure S12, Supporting Information)"
+    },
+    "stability": "After 5000 cycles, the overpotential of PtCoNiMoRh@Rh increased by only 1 mV in acidic conditions, and the catalyst remained stable in neutral and alkaline conditions"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "The core-shell structure enhances the interaction between Rh shell and PtCoNiMoRh core, reducing the unoccupied Rh 4d states (especially 4d₅/₂). This optimizes H* adsorption/desorption and facilitates H₂O dissociation. DFT shows Rh 4d orbitals shift with shell thickness, and the H* adsorption energy is more favorable for PtCoNiMoRh@Rh with 1 ML shell."
+  }
+}

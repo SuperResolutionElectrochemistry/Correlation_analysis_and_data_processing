@@ -1,0 +1,64 @@
+{
+  "literature_id": "HEA-json4",
+  "doi": "10.1021/jacs.2c02755",
+
+  "HEA_composition": {
+    "catalyst_name": "IrPdPtRhRu HEA NPs",
+    "elements": ["Ir", "Pd", "Pt", "Rh", "Ru"],
+    "composition": "Equimolar",
+    "crystal_structure": "FCC (solid solution)",
+    "average_particle_size_nm": "1.32 ± 0.41 nm"
+  },
+
+  "synthesis": {
+    "method": "continuous-flow reactor with a liquid-phase reduction method",
+    "precursors": "Iridium(III) acetylacetonate, palladium(II) acetylacetonate, platinum(II) acetylacetonate, rhodium(II) acetylacetonate, ruthenium(III) acetylacetonate",
+    "reaction_conditions": {
+      "temperature_K": 503.15,
+      "reaction_time_s": 15,
+      "post_synthesis": "washed and vacuum-dried at RT",
+      "hydrogen_treatment_K": 473.15
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "1.32 ± 0.41 nm",
+      "dispersion": "homogeneously dispersed on carbon support"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_constants_A": "3.8843(8) Å",
+      "Vegard_law_observation": "Lattice constant increases linearly with metal composition"
+    },
+    "XPS": {
+      "elements_analyzed": ["Ir", "Pd", "Pt", "Rh", "Ru"],
+      "peak_shift": "No significant shifts indicated"
+    },
+    "HAADF-STEM": "Homogeneous distribution of all five elements in each nanoparticle",
+    "EDX_maps": "Elemental distribution for each element is approximately 20% of total composition, consistent with XRF results"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "HER",
+    "electrolyte": "1 M HClO4 (aq)",
+    "overpotential_mV": {
+      "at_10_mA_cm2": 6
+    },
+    "comparison_overpotential_mV": {
+      "commercial_Pt_C": {
+        "at_10_mA_cm2": 18
+      },
+      "synthesized_Pt_NPs": {
+        "at_10_mA_cm2": 15.5
+      }
+    },
+    "Tafel_slope_mV": "Not explicitly mentioned, but overpotential at 10 mA/cm² is 6 mV, one-third of commercial Pt/C",
+    "mass_activity_A_mg": "1.6 A/mg at -0.01 V, 8.0 times higher than commercial Pt/C",
+    "stability": "No significant degradation observed in polarization curves before and after durability test, indicating high stability in acidic conditions"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "Intrinsic activity is likely influenced by both the size effect and high-entropy effect. The d-band center distribution is broader compared to monometals and binary alloys, contributing to high intrinsic activity."
+  }
+}
