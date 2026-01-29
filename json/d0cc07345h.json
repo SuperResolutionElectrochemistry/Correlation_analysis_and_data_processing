@@ -1,0 +1,108 @@
+{
+  "literature_id": "HEA-json17",
+  "doi": "10.1039/d0cc07345h",
+
+  "HEA_composition": {
+    "catalyst_name": "FeCoNiCuPd HEA-NPs on N-doped carbon nanosheets",
+    "elements": ["Fe", "Co", "Ni", "Cu", "Pd"],
+    "composition_range_at%": "each element between 5–35 at% (ICP-OES)",
+    "support": "ultrathin N-doped carbon nanosheets derived from mpg-C3N4 + PDA",
+    "particle_size_nm": "≈150 nm",
+    "crystal_structure": "FCC single-phase solid solution",
+    "additional_HEAs_prepared": [
+      "FeCoNiMnPd",
+      "FeCoNiCuMn"
+    ]
+  },
+
+  "synthesis": {
+    "method": "synergistic confinement strategy (mpg-C3N4 + PDA)",
+    "precursors": [
+      "mixed metal salts",
+      "1,10-phenanthroline (phen)",
+      "mpg-C3N4 substrate",
+      "polydopamine (PDA) coating"
+    ],
+    "key_steps": {
+      "step1": "formation of M(phen)x complexes",
+      "step2": "adsorption of M(phen)x on mpg-C3N4",
+      "step3": "PDA coating to further confine growth",
+      "step4": "pyrolysis to form HEA-NPs"
+    },
+    "pyrolysis_conditions": {
+      "temperature_K": 1273,
+      "cooling_rate_K_min": 30
+    },
+    "control_samples": {
+      "FeCoNiCuPd_GO": "phase separation observed",
+      "FeCoNiCuPd_RF": "phase separation observed",
+      "FeCoNiCuPd_no_phen": "much broader particle size distribution (20–150 nm)"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "≈150",
+      "dispersion": "uniform on ultrathin N-doped carbon nanosheets"
+    },
+    "HRTEM": {
+      "lattice_spacing_A": 2.13,
+      "assigned_plane": "FCC (111)"
+    },
+    "XRD": {
+      "FeCoNi": "BCC",
+      "FeCoNiCu": "FCC",
+      "FeCoNiCuPd": "primary uniform FCC; peaks slightly downshifted vs FeCoNiCu"
+    },
+    "EDS_mapping": {
+      "FeCoNiCuPd": "homogeneous distribution of all five elements",
+      "FeCoNiCuPd_GO_and_RF": "inhomogeneous distribution with surface segregation"
+    },
+    "XPS": {
+      "surface_states": {
+        "Pd_Cu": "partially oxidized",
+        "Fe_Co_Ni": "mainly oxidized (Fe2+/Fe3+, Co2+/Co3+, Ni2+/Ni3+)",
+        "O_1s": "metal–oxygen bonding present"
+      }
+    },
+    "ICP_OES": {
+      "finding": "all five metals fall within 5–35 at%, consistent with HEA definition"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": ["ORR", "OER"],
+    "electrolyte": "0.1 M NaOH",
+
+    "ORR": {
+      "half_wave_potential_V_RHE": {
+        "FeCoNiCuPd": 0.85,
+        "FeCoNiCu": 0.82,
+        "FeCoNi": 0.83,
+        "commercial_Pt_C": 0.83
+      },
+      "diffusion_limited_current_mA_cm2": 5.15,
+      "measurement_potential_V": 0.20,
+      "Tafel_slope_mV_dec": {
+        "FeCoNiCuPd": 69,
+        "FeCoNi": 73,
+        "commercial_Pt_C": 98
+      },
+      "electron_transfer_number": "≈3.8 (0.5–0.8 V from K–L analysis)",
+      "durability_3000_cycles": {
+        "limiting_current_change": "negligible",
+        "post_test_element_distribution": "remains homogeneous (STEM-EDS)"
+      }
+    },
+
+    "OER": {
+      "overpotential_mV_at_10mA_cm2": 390,
+      "Tafel_slope_mV_dec": 96,
+      "EIS": "FeCoNiCuPd shows smallest charge-transfer resistance among tested samples"
+    }
+  },
+
+  "theoretical_computations": {
+    "note": "No DFT calculations reported in this study"
+  }
+}

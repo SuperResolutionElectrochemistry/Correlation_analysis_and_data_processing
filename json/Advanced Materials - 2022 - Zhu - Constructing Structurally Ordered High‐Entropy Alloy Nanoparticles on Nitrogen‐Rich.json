@@ -1,0 +1,136 @@
+{
+  "literature_id": "HEA-json14",
+  "doi": "10.1002/adma.202110128",
+
+  "HEA_composition": {
+    "catalyst_name": "OHEA-mNC (ordered HEA on N-rich mesoporous carbon)",
+    "elements": ["Co", "Fe", "Ni", "Cu", "Pd"],
+    "chemical_formula": "Co0.31Fe0.27Ni0.19Cu0.09Pd0.14",
+    "crystal_structure": "L12 ordered intermetallic",
+    "support": "2D nitrogen-rich mesoporous carbon nanosheets (mNC)",
+    "mesopore_size_nm": "≈10"
+  },
+
+  "synthesis": {
+    "method": "ligand-assisted interfacial assembly + NH3 annealing",
+    "key_steps": {
+      "step1": "Formation of metal–catecholamine (MC)/PEO-b-PMMA composite monomicelles in THF–water/ethanol",
+      "step2": "Anchoring monomicelles onto GO via electrostatic interaction and PDA polymerization",
+      "step3": "Calcination in NH3 to obtain ordered HEA (OHEA-mNC)",
+      "control": "Calcination in N2 yields disordered HEA (DHEA-mNC)"
+    },
+    "note": "Exact annealing temperature/time are not explicitly specified in the main text"
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "Ultrathin 2D nanosheets with large mesopores",
+      "pore_size_nm": "≈10",
+      "dispersion": "HEA nanoparticles evenly dispersed without obvious aggregation"
+    },
+    "HAADF_STEM": {
+      "phase": "L12 ordered structure",
+      "site_occupation": {
+        "face_center_sites": ["Fe", "Co (dominant)"],
+        "vertex_sites": ["Pd", "Cu"],
+        "Ni": "distributed across lattice"
+      }
+    },
+    "EDS_mapping": {
+      "distribution": "Homogeneous distribution of Co, Fe, Ni, Cu, Pd",
+    },
+    "XRD": {
+      "ordered_phase": "Additional (100) and (110) reflections of L12 Fe3Pd-type phase",
+      "disordered_control": "Typical fcc peaks at (111), (200), (220)",
+      "ordered_fraction": "≈97% for OHEA-mNC; 0% for DHEA-mNC"
+    },
+    "Raman": {
+      "ID_IG": {
+        "OHEA_mNC": 0.97,
+        "DHEA_mNC": 0.81
+      },
+      "implication": "Higher defect density after NH3 treatment"
+    },
+    "BET_porosity": {
+      "surface_area_m2_g": {
+        "OHEA_mNC": 642.356,
+        "DHEA_mNC": 415.930,
+        "OHEA_nNC": 277.382
+      },
+      "pore_volume_cm3_g": {
+        "OHEA_mNC": 0.738,
+        "DHEA_mNC": 0.387,
+        "OHEA_nNC": 0.396
+      }
+    },
+    "XPS": {
+      "nitrogen_content_at%": "≈12",
+      "metal_states": "Predominantly metallic",
+      "binding_energy_shifts": {
+        "Cu_2p_Pd_3d": "shift to lower BE",
+        "Fe_2p_Co_2p_Ni_2p": "shift to higher BE"
+      }
+    },
+    "total_metal_content_wt%": 31.6
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Reduction Reaction (ORR)",
+    "electrolyte": "0.1 M KOH",
+    "diffusion_limited_current_mA_cm2": "≈5.70",
+    "half_wave_potential_V_RHE": {
+      "OHEA_mNC": 0.90,
+      "comparison": {
+        "vs_PtC": "+≈30 mV",
+        "vs_OHEA_nNC": "+≈40 mV",
+        "vs_DHEA_mNC": "+≈60 mV"
+      }
+    },
+    "electron_transfer_number": "≈4.0 (0.3–0.5 V by K-L analysis and RRDE)",
+    "Tafel_slope_mV_dec": {
+      "OHEA_mNC": 55,
+      "DHEA_mNC": 67,
+      "OHEA_nNC": 82,
+      "PtC": 105
+    },
+    "mass_activity": {
+      "at_0_9V_RHE": "2.037 mA μgPd−1",
+      "enhancement": "5.4× vs OHEA-nNC; 12× vs DHEA-mNC; 10× vs Pt/C"
+    },
+    "TOF_s_minus1": {
+      "OHEA_mNC": 0.049,
+      "DHEA_mNC": 0.008
+    },
+    "stability": {
+      "potential_window_V": "0.2–1.1 vs RHE",
+      "cycles": 10000,
+      "half_wave_decay_mV": 10,
+      "chronoamperometry_retention_18h": {
+        "OHEA_mNC": "95.37%",
+        "PtC": "71.03%"
+      },
+      "post_test_structure": "L12 order largely retained (≈91% ordered fraction after cycling)"
+    }
+  },
+
+  "theoretical_computations": {
+    "models": {
+      "OHEA": "L12 ordered model",
+      "DHEA": "fcc random model"
+    },
+    "stability": "OHEA has lower total energy than DHEA (more robust structure)",
+    "electronic_structure": {
+      "Pd_5d_Cu_3d": "deep bands (~ −3 eV), act as electron reservoir",
+      "Fe_3d_Co_3d": "dominate above Fermi level (electron depletion centers)",
+      "Ni_3d": "intermediate, facilitates bidirectional electron transfer",
+      "key_feature": "Co 3d in OHEA is closer to Fermi level than in DHEA"
+    },
+    "O2_adsorption": "Both phases show orbital shifts indicating strong O2–surface interaction; stronger facilitation in OHEA",
+    "site_dependent_PDOS": {
+      "surface_vs_bulk": "Pd and Cu shift toward Fermi level at surface",
+      "Co": "reduced eg–t2g splitting (better electron transfer)",
+      "Fe_Ni": "relatively stable d-band centers",
+      "interpretation": "Clear task partition among lattice sites enables high ORR efficiency"
+    }
+  }
+}

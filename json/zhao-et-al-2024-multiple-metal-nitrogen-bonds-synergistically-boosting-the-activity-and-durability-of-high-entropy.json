@@ -1,0 +1,107 @@
+{
+  "literature_id": "HEA-json18",
+  "doi": "10.1021/jacs.3c08177",
+
+  "HEA_composition": {
+    "catalyst_name": "N–Pt/HEA/C",
+    "elements": ["Pt", "Co", "Fe", "Ni", "Cu", "N"],
+    "metal_atomic_ratio": "≈1:1:1:1:1 (Pt:Co:Fe:Ni:Cu, by STEM-EDS)",
+    "nitrogen_content_at_percent": 3.1,
+    "pt_weight_percent": 19.2,
+    "architecture": "Pt-rich shell + N-doped PtCoFeNiCu HEA core",
+    "crystal_structure": "FCC solid solution",
+    "average_particle_size_nm": "4.1 ± 0.8"
+  },
+
+  "synthesis": {
+    "method": "thermal annealing + NH3 nitridation + acid de-alloying",
+    "precursors": [
+      "Pt(acac)2",
+      "Co(acac)2",
+      "Fe(acac)3",
+      "Ni(acac)2",
+      "Cu(acac)2"
+    ],
+    "support": "Vulcan XC-72 carbon",
+    "reaction_conditions": {
+      "step_1_HEA_annealing_temperature_K": 873.15,
+      "step_1_HEA_annealing_time_h": 2,
+      "step_1_atmosphere": "20 vol% H2/Ar",
+      "step_2_N_doping_temperature_K": 773.15,
+      "step_2_N_doping_time_h": 2,
+      "step_2_atmosphere": "NH3",
+      "acid_etch_temperature_K": 333.15,
+      "acid_etch_time_h": 2,
+      "acid_etch_solution": "0.1 M H2SO4",
+      "final_drying": "vacuum drying at 333.15 K"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "crystal_structure": "FCC",
+      "characteristic_plane_spacing_nm": "0.210 (111)",
+      "peak_shift": "N–Pt/HEA/C peaks shift to lower angles vs Pt/HEA/C, indicating tensile strain from N-doping"
+    },
+    "HAADF_STEM": {
+      "dispersion": "uniform on carbon support",
+      "core_shell": "Pt-rich shell surrounding HEA core",
+      "post_ADT_particle_size_nm": "4.5 ± 0.1"
+    },
+    "EDS_mapping": {
+      "distribution": "homogeneous multielement core with Pt-enriched shell",
+      "confirmation_of_equimolarity": "close to 1:1:1:1:1 for Pt, Co, Fe, Ni, Cu"
+    },
+    "XANES_EXAFS": {
+      "main_findings": [
+        "No significant metal oxidation in bulk core after nitridation",
+        "Formation of multiple M–N bonds (mainly Ni–N and Co–N)",
+        "Local lattice distortion in HEA core after N-doping"
+      ]
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Reduction Reaction (ORR)",
+    "electrolyte": "0.1 M HClO4 (aq)",
+    "half_wave_potential_mV_vs_RHE": 924,
+    "specific_activity_mA_cm2_at_0_9V": 1.93,
+    "mass_activity_A_mgPt_at_0_9V": 1.34,
+
+    "stability_RDE": {
+      "ADT_protocol": "0.6–0.95 V trapezoidal cycling, 30,000 cycles",
+      "E1_2_decay_mV": 8,
+      "mass_activity_loss_percent": 20.9,
+      "specific_activity_loss_percent": 16.6,
+      "particle_growth_nm": "≈ +0.4"
+    },
+
+    "MEA_performance": {
+      "pt_loading_mg_cm2": 0.20,
+      "temperature_K": 353.15,
+      "pressure_kPa_abs": 250,
+      "current_density_mA_cm2_at_0_7V_BOL": 1639,
+      "current_density_mA_cm2_at_0_7V_after_30000_cycles": 1437,
+      "voltage_loss_mV": {
+        "at_0_8A_cm2": 18
+      },
+      "ECSA_loss_percent": 9.8
+    }
+  },
+
+  "theoretical_computations": {
+    "model": "Pt/HEA FCC(111) slab (4 layers, 3×4 supercell)",
+    "lattice_parameter_A": 3.7,
+    "nitrogen_site_preference": "octahedral interstitial sites",
+    "preferred_M_N_bond_order": "Ni > Co > Fe > Cu ≈ Pt",
+    "adsorption_energetics": {
+      "O_and_OH_binding": "weaker than pure Pt, beneficial for ORR",
+      "rate_determining_step_effect": "N-doping mainly facilitates O2 → *O step"
+    },
+    "d_band_center": {
+      "vs_Pt": "downshift on Pt/HEA",
+      "effect_of_N": "slight upshift relative to Pt/HEA, optimizing *O adsorption"
+    },
+    "stability_insight": "interstitial N increases surface segregation energy, suppressing metal dissolution"
+  }
+}

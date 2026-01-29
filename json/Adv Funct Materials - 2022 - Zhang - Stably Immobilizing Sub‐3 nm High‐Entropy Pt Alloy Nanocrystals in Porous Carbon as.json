@@ -1,0 +1,153 @@
+{
+  "literature_id": "HEA-json13",
+  "doi": "10.1002/adfm.202204110",
+
+  "HEA_composition": {
+    "catalyst_name": "6-HENs/PC (PtFeCoNiCuZn on porous carbon)",
+    "elements": ["Pt", "Fe", "Co", "Ni", "Cu", "Zn"],
+    "atomic_ratio": "Pt:Fe:Co:Ni:Cu:Zn = 33.9:26.6:12.4:10.1:10.5:6.5",
+    "crystal_structure": "FCC solid solution",
+    "average_particle_size_nm": "2.2 nm (senary 6-HENs)",
+    "metal_loading": {
+      "Pt_loading_wt%": 1.8,
+      "total_metal_loading_wt%": 5.0
+    },
+
+    "other_HEAs_reported": {
+      "7-HENs": {
+        "composition": "PtRuIrFeCoNiCu",
+        "average_size_nm": 2.6,
+        "Pt_loading_wt%": "0.6–1.0",
+        "total_metal_loading_wt%": "4.7–5.2"
+      },
+      "8-HENs": {
+        "composition": "PtRuIrFeCoNiCuZn",
+        "average_size_nm": 2.9,
+        "Pt_loading_wt%": "0.6–1.0",
+        "total_metal_loading_wt%": "4.7–5.2"
+      },
+      "10-HENs": {
+        "composition": "PtRuIrRhFeCoNiCuZnSn",
+        "average_size_nm": 2.8,
+        "Pt_loading_wt%": "0.6–1.0",
+        "total_metal_loading_wt%": "4.7–5.2"
+      }
+    }
+  },
+
+  "synthesis": {
+    "method": "Anchoring–carbonization strategy via EISA in SiO2 hard template",
+    "precursors": [
+      "Pt(acac)2",
+      "Ru(acac)3",
+      "Ir(acac)3",
+      "Rh(acac)3",
+      "Fe(acac)2",
+      "Co(acac)3",
+      "Ni(acac)2",
+      "Cu(acac)2",
+      "Zn(acac)2",
+      "Sn(acac)4",
+      "Pluronic F127",
+      "resol (phenolic resin)",
+      "TEOS (SiO2 template precursor)"
+    ],
+    "reaction_conditions": {
+      "solution_assembly": {
+        "solvents": "THF/CHCl3 mixed solvent",
+        "F127_mass_g": 0.165,
+        "resol_volume_mL": 1.854,
+        "HCl_volume_mL": 0.07,
+        "TEOS_volume_mL": 0.314,
+        "stirring_time_h": 1
+      },
+      "EISA_process": {
+        "drying_temperature_K": 353.15,
+        "drying_time_h": "24",
+        "curing_steps": [
+          "383.15 K for 12 h",
+          "403.15 K for 12 h"
+        ]
+      },
+      "calcination_in_N2": [
+        "393.15 K for 1 h",
+        "723.15 K for 3 h",
+        "973.15 K for 2 h"
+      ],
+      "template_removal": "2 M NaOH at 353.15 K"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "macropore_size_nm": 480,
+      "mesopore_size_nm": 10.5,
+      "HENs_size_nm": 2.2,
+    "HRTEM": {
+      "lattice_spacing_A": 2.156,
+      "assigned_plane": "Pt (111)"
+    },
+    "EDS_mapping": {
+      "distribution": "Uniform mixing of all six metals",
+      "consistency": "Matches ICP results"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "key_feature": "Pt(111) peak shifts to higher angle vs Pt/C (lattice contraction)"
+    },
+    "XPS": {
+      "valence_state": "Mainly metallic for all six elements",
+      "Pt_4f_shift": "-0.16 eV vs commercial Pt/C"
+    },
+    "porosity": {
+      "BET_surface_area_cm2_g": 1183.8,
+      "total_pore_volume_cm3_g": 2.76,
+      "isotherm_type": "Type IV with H2 hysteresis loop"
+    },
+    "thermal_stability_test": {
+      "extra_annealing_K": 1173.15,
+      "result": "No obvious particle growth; much more stable than commercial Pt/C"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Reduction Reaction (ORR)",
+    "electrolyte": "0.1 M HClO4",
+    "measurement_conditions": {
+      "RDE_speed_rpm": 1600,
+      "scan_rate_mV_s": 10,
+      "reference_electrode": "Ag/AgCl (−0.276 V vs RHE)",
+      "Pt_loading_on_RDE_ug_cm2": 6.9
+    },
+    "half_wave_potential_V_RHE": {
+      "6-HENs_PC": 0.898,
+      "7-HENs_PC": 0.794,
+      "8-HENs_PC": 0.779,
+      "10-HENs_PC": 0.667
+    },
+    "mass_activity": "At 0.9 V_RHE, 6-HENs/PC shows 3.8–6.3× higher MA than other alloys and commercial Pt/C",
+    "ECSA": {
+      "6_HENs_PC_m2_gPt": 102.3,
+      "commercial_PtC_m2_gPt": 63.2
+    },
+    "durability_5000_cycles": {
+      "MA_retention": "≈98% for 6-HENs/PC",
+      "ECSA_loss": "≈3% for 6-HENs/PC",
+      "particle_growth": "2.2 → 2.3 nm (negligible)",
+      "comparison_PtC": {
+        "MA_loss": "≈33%",
+        "ECSA_loss": "≈20%",
+        "particle_growth": "2.6 → 4.5 nm"
+      }
+    }
+  },
+
+  "theoretical_computations": {
+    "proposed_origin_of_activity": [
+      "Strain effect: stronger lattice contraction in 6-HENs than LEN/MEN",
+      "Electronic effect: more negative Pt 4f shift → higher electron density on Pt",
+      "These effects likely lower Pt d-band center and optimize O-species adsorption"
+    ],
+    "note_on_other_HEAs": "Presence of Ru in 7-, 8-, 10-HENs likely degrades ORR activity"
+  }
+}

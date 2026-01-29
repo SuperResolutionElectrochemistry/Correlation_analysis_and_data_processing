@@ -1,0 +1,137 @@
+{
+  "literature_id": "HEA-json16",
+  "doi": "10.1002/anie.202407116",
+
+  "HEA_composition": {
+    "research_system": "Pt-based quinary HEAs (microscale arrays + CNF-loaded catalysts)",
+    "element_pool_for_design": ["Fe", "Co", "Ni", "Mn", "Cu", "Mo", "Sn", "Ce"],
+    "screened_combinations": 70,
+    "top_three_combinations": [
+      "FeNiCuCoPt",
+      "FeNiCoSnPt",
+      "FeNiCuSnPt"
+    ],
+    "form": {
+      "screening_stage": "microscale HEAs printed on glassy carbon (GC)",
+      "validation_stage": "HEAs loaded on CO2-activated carbon nanofibers (CNFs)"
+    },
+    "crystal_structure": "FCC single-phase solid solution (both microscale HEAs and HEAs@CNFs)"
+  },
+
+  "synthesis": {
+    "method": "precursor printing + pulse high-temperature synthesis",
+    "precursors": "metal chloride salts (printed as mixed precursor droplets)",
+    "substrate": "glassy carbon (GC) for screening; CO2-activated carbon nanofibers for validation",
+    "pulse_heating_conditions": {
+      "atmosphere": "Ar",
+      "peak_temperature_K": 2023,
+      "pulse_duration_s": 0.55,
+      "number_of_pulses": 5
+    },
+    "outcome": "complete decomposition of metal chlorides (no Cl detected by EDS)"
+  },
+
+  "physicochemical_characterization": {
+    "SEM": {
+      "microscale_HEAs": "dense surface structure with no visible phase segregation"
+    },
+    "EDS_mapping": {
+      "microscale_HEAs": "uniform elemental distribution across particles"
+    },
+    "XRD": {
+      "microscale_HEAs": "single-phase FCC",
+      "HEAs@CNFs": "single-phase FCC for all three top combinations"
+    },
+    "TEM_HEAs_CNF": {
+      "particle_size_nm": {
+        "FeNiCuCoPt": "7.8 ± 1.7",
+        "FeNiCoSnPt": "8.1 ± 1.6",
+        "FeNiCuSnPt": "6.1 ± 1.1"
+      }
+    },
+    "HRTEM_HEAs_CNF": {
+      "lattice_spacing_A": "≈2.13–2.15 (assigned to FCC (111))"
+    },
+    "HAADF_STEM_EDS_HEAs_CNF": {
+      "distribution": "homogeneous mixing of all elements in each nanoparticle"
+    },
+    "ICP_OES": {
+      "finding": "element ratios of HEAs@CNFs are consistent with microscale HEAs"
+    }
+  },
+
+  "electrochemical_performance": {
+    "screening_method": {
+      "technique": "SECCM (scanning electrochemical cell microscopy)",
+      "electrolyte": "0.1 M HClO4",
+      "electrode_configuration": "three-electrode (Ag/AgCl reference, graphite counter)",
+      "tip_diameter_um": 20,
+      "scan_rate_mV_s": 10,
+      "descriptor": "j_relative = i / i_charging (used as intrinsic activity proxy)"
+    },
+
+    "high_throughput_results": {
+      "screened_samples": 70,
+      "ranking_consistency": "similar activity ranking at 0.10–0.25 V vs RHE",
+      "best_combinations": [
+        "FeNiCuCoPt (C2)",
+        "FeNiCoSnPt (C4)",
+        "FeNiCuSnPt (D6)"
+      ],
+      "reproducibility": "parallel synthesis of FeNiCuCoPt shows overlapping j_relative–E curves"
+    },
+
+    "RRDE_validation_on_HEAs_CNF": {
+      "electrolyte": "O2-saturated 0.1 M HClO4",
+      "rotation_speed_rpm": 1600,
+      "half_wave_potential_V_RHE": {
+        "FeNiCuCoPt": 0.892,
+        "FeNiCoSnPt": 0.869,
+        "FeNiCuSnPt": 0.866,
+        "commercial_Pt_C": 0.856
+      },
+      "Tafel_slope_mV_dec": {
+        "FeNiCuCoPt": 77,
+        "FeNiCoSnPt": 98,
+        "FeNiCuSnPt": 113,
+        "commercial_Pt_C": 131
+      },
+      "mass_activity_A_mgPt_at_0_85V": {
+        "FeNiCuCoPt": 1.32,
+        "FeNiCoSnPt": 0.72,
+        "FeNiCuSnPt": 0.50,
+        "commercial_Pt_C": 0.12
+      },
+      "electron_transfer": {
+        "n": "≈4 for all three HEAs (K–L + RRDE)",
+        "H2O2_yield": "low (typical 4e- pathway)"
+      },
+      "durability_10000_cycles": {
+        "FeNiCuCoPt": {
+          "E1_2_shift_mV": -10,
+          "post_test_phase": "FCC maintained",
+          "dissolution": "only trace non-precious metals detected"
+        }
+      }
+    }
+  },
+
+  "theoretical_computations": {
+    "surface_model": "FCC (111) slabs for FeNiCuCoPt, FeNiCoSnPt, FeNiCuSnPt",
+    "active_site": "Fe sites identified as primary ORR active centers",
+    "O2_adsorption": {
+      "trend": "FeNiCuCoPt shows strongest O2 adsorption among three",
+      "correlation": "adsorption ranking matches experimental activity ranking"
+    },
+    "electronic_structure": {
+      "d_band_center": "shifts toward Fermi level with composition tuning",
+      "synergy": "Cu–Co interaction promotes favorable electronic environment at Fe sites",
+      "charge_transfer": "Fe in FeNiCuCoPt transfers more electrons to O2"
+    },
+    "reaction_pathway": {
+      "mechanism": "4e- ORR in acidic media",
+      "rate_determining_step": "*OOH → *O",
+      "best_performance": "FeNiCuCoPt shows highest limiting voltage and lowest barrier"
+    }
+  }
+}

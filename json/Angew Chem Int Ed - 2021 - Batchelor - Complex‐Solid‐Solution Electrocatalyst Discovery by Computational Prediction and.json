@@ -1,0 +1,69 @@
+{
+  "literature_id": "HEA-json15",
+  "doi": "10.1002/anie.202014374",
+
+  "HEA_composition": {
+    "system_studied": "Ag–Ir–Pd–Pt–Ru complex solid solution (CSS)",
+    "approach": "continuous composition-spread thin-film libraries (ML1, ML2, ML3)",
+    "representative_predicted_compositions": [
+      "Ag5Ir5Pt20Pd35Ru35",
+      "Ag5Ir5Pd17Pt68Ru5"
+    ],
+    "phase_information": {
+      "ML1": "mixed regions: fcc, fcc + hcp, and hcp",
+      "ML2_ML3": "predominantly fcc"
+    }
+  },
+
+  "synthesis": {
+    "method": "combinatorial co-sputtering from five elemental targets (Ag, Ir, Pd, Pt, Ru)",
+    "product_form": "continuous composition-gradient thin-film materials libraries (MLs)",
+    "notes": "342 measurement areas (MAs) synthesized simultaneously on each ML"
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "purpose": "identify phase (fcc vs hcp) across the composition library",
+      "finding": "ML1 contains mixed phases; ML2 and ML3 are purely fcc"
+    },
+    "EDX_mapping": {
+      "purpose": "verify continuous composition gradients across ML",
+      "finding": "smooth spatial composition variation consistent with library design"
+    },
+    "APT": {
+      "purpose": "confirm single-phase CSS state",
+      "example_bulk_composition": "Pd47.1Pt18.9Ru17.8Ir15.9Ag0.3 (from one thin-film tip sample)"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Reduction Reaction (ORR)",
+    "electrolyte": "0.1 M HClO4",
+    "measurement_method": "scanning droplet cell (SDC) with linear sweep voltammetry (LSV)",
+    "activity_descriptor": "current density at 820 mV vs RHE",
+    "key_findings": [
+      "Predicted and experimental activity maps agree well when using Model III",
+      "Most active CSS compositions outperform Pt thin film in the low-overpotential region",
+      "Activity trends are robust to potential choice because LSV curves do not cross in the relevant range"
+    ],
+    "reproducibility": "ML2 re-measured after 90° rotation; identical activity trends obtained"
+  },
+
+  "theoretical_computations": {
+    "models_developed": ["Model I", "Model II", "Model III"],
+    "surface_model": "100×100 atom fcc slab (3 layers) randomly populated by Ag, Ir, Pd, Pt, Ru",
+    "descriptor_basis": {
+      "Model_I": "*OH binding on on-top sites (optimum = 0.1 eV weaker than Pt)",
+      "Model_II": "*O binding on hollow sites (optimum = 0.2 eV weaker than Pt)",
+      "Model_III": "co-adsorption of *O and *OH with neighbor-site blocking"
+    },
+    "current_model": "Koutecký–Levich formalism with site-resolved current ji(U)",
+    "dataset": "≈20,000 DFT-predicted binding energies used to train linear regression",
+    "optimization": "sequential least squares programming to maximize predicted activity",
+    "conceptual_conclusion": [
+      "On CSS surfaces, on-top (*OH) and hollow (*O) sites do NOT scale as on pure metals",
+      "Including adsorbate–adsorbate interaction and site blocking (Model III) is essential",
+      "Active surface emerges from local site heterogeneity + neighbor blocking effects"
+    ]
+  }
+}
