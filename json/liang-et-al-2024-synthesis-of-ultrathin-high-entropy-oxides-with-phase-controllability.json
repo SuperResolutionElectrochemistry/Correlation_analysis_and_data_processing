@@ -1,0 +1,72 @@
+{
+  "literature_id": "HEA-json10",
+  "doi": "10.1021/jacs.3c10868",
+
+  "HEA_composition": {
+    "catalyst_name": "High-Entropy Oxides (HEOs) with Phase Controllability",
+    "elements": ["Fe", "Co", "Ni", "Cr", "Mn", "Zn", "Cu", "Li", "Ga"],
+    "composition": "Variable, designed based on target phase (e.g., equimolar for demonstration)",
+    "crystal_structure": ["Rock-salt", "Spinel", "Perovskite", "Fluorite"],
+    "morphology": "Ultrathin, flexible, curled nanosheets with micrometer-scale lateral size",
+    "thickness_control": "Thickness increases with longer reaction time or reduced glucose/glycine (Figures S4, S5)"
+  },
+
+  "synthesis": {
+    "method": "Self-lattice framework-guided strategy with Ga as a mixing assistor",
+    "key_concept": "Element bonding preference forms a 'self-lattice framework'; Ga lowers formation energy to promote high-entropy mixing state",
+    "precursors": ["Metal salts", "Glucose", "Glycine"],
+    "template_role": "Glucose and glycine generate a carbon template to guide nanosheet formation (Figure S1)",
+    "reaction_conditions": {
+      "atmosphere": "Air",
+      "temperature": "Relatively low (unspecified), chosen to preserve template function",
+      "time": "Variable; longer time increases nanosheet thickness (Figure S4)"
+    },
+    "post_processing": "Annealing, carbon template removal"
+  },
+
+ "physicochemical_characterization": {
+    "morphology": {
+      "SEM/AFM": "Curled, flexible nanosheets with ultrathin thickness (Figure S2)",
+      "BET_surface_area": "77.5 m2/g",
+      "pore_structure": "Mesoporous (~10 nm pore size) (Figure S3)",
+      "carbon_residue": "~0.6 wt% (carbon-sulfur analyzer)"
+    },
+    "crystal_structure": {
+      "XRD": "Confirmed single-phase structures: Rock-salt (Fig 2a), Spinel (Fig 2b), Perovskite (Fig 2c), Fluorite (Fig 2d)",
+      "SAED": "Polycrystalline rings matching respective crystal structures (Figure S9)"
+    },
+    "elemental_distribution": {
+      "TEM_EDS_mapping": "Uniform distribution of all metallic elements (Figs 2a-d, S6, S7)",
+      "XPS": "Confirmed oxidation states of all elements and presence of oxygen vacancies (Figs S8, S10-S12, S24)",
+      "note": "Li confirmed by XPS due to detection limit of EDS"
+    },
+    "key_finding": "Ga assistor enables single-phase formation by reducing formation energy; absence leads to impurity phases and elemental aggregation (Figs 3, S15-S19)"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "1 M KOH",
+    "overpotential_at_10_mA_cm2": {
+        "GaFeCoNiMo": "~375 mV (lowest among tested)",
+        "GaFeCoNiCr": "Higher than GaFeCoNiMo",
+        "GaFeCoNi": "Higher than quinary systems",
+        "RuO₂": "~400 mV"
+      },
+    "Tafel_slope_mV_dec": {
+        "GaFeCoNiMo": "66.8",
+        "GaFeCoNiCr": "70.1"
+      },
+    "stability": "GaFeCoNiMo shows no significant degradation over 250 hours at 10 mA/cm² ",
+    "proposed_enhancement_mechanism": [
+      "Entropy engineering enhances catalytic performance",
+      "Mo alloying modulates electronic structure and induces strain",
+      "Abundant oxygen vacancies promote catalysis"
+    ]
+  },
+
+  "theoretical_insight": {
+    "calculation_method": "Density Functional Theory (DFT)",
+    "key_result": "Formation energy of the system with Ga assistor is lower than that without (Figure 3c)",
+    "mechanism_summary": "The self-lattice framework (based on elemental bonding preferences) guides target phase formation. The Ga assistor thermodynamically stabilizes the high-entropy mixing state by reducing formation energy, enabling single-phase HEO synthesis."
+  }
+}

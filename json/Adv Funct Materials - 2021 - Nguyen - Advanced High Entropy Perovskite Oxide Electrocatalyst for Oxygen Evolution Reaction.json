@@ -1,0 +1,69 @@
+{
+  "literature_id": "HEA-json6",
+  "doi": "10.1002/adfm.202101632",
+
+  "HEA_composition": {
+    "catalyst_name": "High Entropy Perovskite Oxides (HEPO)",
+    "elements": ["Cr", "Mn", "Fe", "Co", "Ni"],
+    "composition":"Equimolar and five non-equimolar (one transition metal concentration doubled)",
+    "crystal_structure": "Orthorhombic perovskite (Pbnm)",
+    "average_particle_size_nm": "100 nm"
+  },
+
+  "synthesis": {
+    "method": "Co-precipitation followed by post annealing",
+    "precursors": "Lanthanum nitrate hexahydrate, Cr, Mn, Fe, Co, Ni metal sulfates",
+    "reaction_conditions": {
+      "temperature_K": 1023.15,
+      "reaction_time_s": 43200,
+      "post_synthesis": "dried at 60 °C and heat-treated at 750 °C for 12 hours"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "≈100 nm",
+      "dispersion": "Uniform nanoparticles"
+    },
+    "XRD": {
+      "crystal_structure": "Orthorhombic perovskite (Pbnm)",
+      "lattice_constants_A": "Not specified explicitly"
+    },
+    "XPS": {
+      "elements_analyzed": ["La", "Cr", "Mn", "Fe", "Co", "Ni"],
+      "peak_shift": "Binding energy shifts indicating metal oxidation states"
+    },
+    "HAADF-STEM": "Uniform distribution of metal elements in each nanoparticle",
+    "EDX_maps": "Elemental distribution consistent with ICP-MS results"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "1 M KOH",
+    "overpotential_mV": {
+      "at_10_mA_cm2": "325 mV for optimized La(CrMnFeCo2Ni)O3 HEPO"
+    },
+    "comparison_overpotential_mV": {
+      "single_perovskite_oxides": {
+        "LaCrO3": "420 mV",
+        "LaMnO3": "460 mV",
+        "LaFeO3": "437 mV",
+        "LaCoO3": "380 mV",
+        "LaNiO3": "380 mV"
+      }
+    },
+    "Tafel_slope_mV": {
+      "L5M2Co": "51.2 mV/dec",
+      "L5M2Fe": "54 mV/dec",
+      "L5M2Ni": "55.1 mV/dec",
+      "L5M2Cr": "56 mV/dec",
+      "L5M2Mn": "66.3 mV/dec"
+    },
+    "mass_activity_A_mg": "Not explicitly quantified; highest TOF and intrinsic activity observed for L5M2Co",
+    "stability": "Excellent electrochemical stability for 50 hours at 10 mA cm−2"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "DFT calculations show that Mn4+ and Co3+ contribute significantly to OER activity. The reaction mechanism is dominated by the Adsorbate Evolution Mechanism (AEM), with *O and *OOH being the key intermediates."
+  }
+}

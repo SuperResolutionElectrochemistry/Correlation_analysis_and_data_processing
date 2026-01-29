@@ -1,0 +1,65 @@
+{
+  "literature_id": "HEA-json12",
+  "doi": "10.1021/acs.nanolett.2c01147",
+
+  "HEA_composition": {
+    "catalyst_name": "High-Entropy Rocksalt Oxides (HERsO)",
+    "elements": ["Mg", "Fe", "Co", "Ni", "Zn"],
+    "composition": "Equimolar (MgFeCoNiZn)",
+    "crystal_structure": "Rock-salt structure",
+    "average_particle_size_nm": "700 nm"
+  },
+
+  "synthesis": {
+    "method": "Joule-heating of nickel foil",
+    "precursors": "Hydroxide precursors of Mg, Fe, Co, Ni, and Zn",
+    "reaction_conditions": {
+      "temperature_K": 1273.15,
+      "reaction_time_s": "30 seconds",
+      "post_synthesis": "Annealed and cooled under Ar atmosphere"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "700 nm",
+      "dispersion": "Uniform nanosheet morphology"
+    },
+    "XRD": {
+      "crystal_structure": "Rock-salt",
+    },
+    "XPS": {
+      "elements_analyzed": ["Mg", "Fe", "Co", "Ni", "Zn"],
+      "peak_shift": "Binding energy shifts indicating oxidation states of metal cations"
+    },
+    "HAADF-STEM": "Nanosheet structure with uniform elemental distribution",
+    "EDX_maps": "Homogeneous distribution of elements at both particle and atomic scales"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "Alkaline electrolyte",
+    "overpotential_mV": {
+      "at_10_mA_cm2": "300 mV"
+    },
+    "comparison_overpotential_mV": {
+      "HERSO (MgFeCoNiZn)O": {
+        "at_10_mA_cm2": "300 mV"
+      },
+    },
+    "Tafel_slope_mV": {
+      "HERSO (MgFeCoNiZn)O": "44.9 mV/dec",
+      "IrO2": "47.2 mV/dec"
+    },
+    "mass_activity_A_mg": "Not reported; overall activity superior to IrO₂ based on overpotential and Tafel slope",
+    "stability": {
+      "test_method": "Chronopotentiometry at fixed current density",
+      "performance": "Good stability compared to IrO₂ (Figure 5d)",
+      "post_test_characterization": "Retains rocksalt structure and uniform elemental distribution (Figure 5e,f, S39)"
+    },
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "The OER activity of (MgFeCoNiZn)O is enhanced by the synergy of multiple active sites from Fe, Co, and Ni, with DFT simulations showing continuous electronic structure and favorable intermediate adsorption, particularly for the *OH and *OOH intermediates."
+  }
+}

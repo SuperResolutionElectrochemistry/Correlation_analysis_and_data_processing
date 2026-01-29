@@ -1,0 +1,70 @@
+{
+  "literature_id": "HEA-json9",
+  "doi": "10.1039/d1cc03072h",
+
+  "HEA_composition": {
+    "catalyst_name": "FeCoNiCrMn HEA/CNFs",
+    "elements": ["Fe", "Co", "Ni", "Cr", "Mn"],
+    "composition": "Near-equimolar (Fe: 20.3%, Co: 22.4%, Ni: 21.3%, Cr: 16.2%, Mn: 19.8%)",
+    "crystal_structure": "FCC (solid solution)",
+    "average_particle_size_nm": "≈20 nm"
+  },
+
+  "synthesis": {
+    "method": "Electrospinning followed by pre-oxidation and carbonization",
+    "precursors": "Fe, Co, Ni, Cr, Mn metal salts dissolved in PAN/DMF solution",
+    "reaction_conditions": {
+      "temperature_K": 1273.15,
+      "reaction_time_s": "Not specified",
+      "post_synthesis": "Carbonized at 1000 °C under nitrogen atmosphere"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "≈20 nm",
+      "dispersion": "Uniform distribution of elements"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_constants_A": "Not specified explicitly"
+    },
+    "XPS": {
+      "elements_analyzed": ["Fe", "Co", "Ni", "Cr", "Mn"],
+      "peak_shift": "Binding energy shifts for Fe, Co, Ni, Cr, and Mn due to alloying and oxidation"
+    },
+    "HAADF-STEM": "Uniform distribution of the metal elements in HEA nanocrystals",
+    "EDX_maps": "Uniform distribution of Fe, Co, Ni, Cr, Mn in nanocrystals"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "1 M KOH",
+    "overpotential_mV": {
+      "at_50_mA_cm2": "345 mV"
+    },
+    "comparison_overpotential_mV": {
+     "FeCoNi/CNFs": {
+        "at_50_mA_cm2": "407 mV"
+      },
+      "FeCoNiMn/CNFs": {
+        "at_50_mA_cm2": "376 mV"
+      },
+      "FeCoNiCr/CNFs": {
+        "at_50_mA_cm2": "369 mV"
+      }
+    },
+    "Tafel_slope_mV": {
+      "FeCoNiCrMn/CNFs": "81.3 mV/dec",
+      "FeCoNi/CNFs": "166.2 mV/dec",
+      "FeCoNiMn/CNFs": "133.6 mV/dec",
+      "FeCoNiCr/CNFs": "106.3 mV/dec"
+    },
+    "mass_activity_A_mg": "Not explicitly mentioned, but significantly higher for FeCoNiCrMn compared to other MEAs",
+    "stability": "Stable for 20 hours at 10 mA/cm² with minimal degradation"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "Operando Raman spectroscopy indicates that electron transfer from low-electronegativity metals (Fe, Ni, Cr, Mn) to Co creates a local negative charge center on Co sites, weakening the OH bond and lowering its adsorption energy."
+  }
+}

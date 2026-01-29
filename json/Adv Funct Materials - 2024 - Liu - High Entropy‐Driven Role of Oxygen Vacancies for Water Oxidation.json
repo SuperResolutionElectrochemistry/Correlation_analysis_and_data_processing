@@ -1,0 +1,65 @@
+{
+  "literature_id": "HEA-json7",
+  "doi": "10.1002/adfm.202314820",
+
+  "HEA_composition": {
+    "catalyst_name": "High Entropy Oxides with Oxygen Vacancies (HEOs-Ov)",
+    "elements": ["Co", "Mn", "Fe", "Ni", "Zn"],
+    "composition": "Equimolar",
+    "crystal_structure": "Spinel structure",
+    "average_particle_size_nm": "Not specified, core-shell structure observed"
+  },
+
+  "synthesis": {
+    "method": "Low-temperature surface carbonization–decarbonization method",
+    "precursors": "Metal nitrates (Co, Mn, Fe, Ni, Zn) mixed in ethanol solution, followed by solvothermal treatment",
+    "reaction_conditions": {
+      "temperature_K": 473.15,
+      "reaction_time_s": "Not specified",
+      "post_synthesis": "Decarbonization treatment in air"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "Not specified, but core-shell structure confirmed",
+      "dispersion": "Uniform distribution of metals and oxygen vacancies"
+    },
+    "XRD": {
+      "crystal_structure": "Spinel structure",
+      "lattice_constants_A": "Not specified explicitly"
+    },
+    "XPS": {
+      "elements_analyzed": ["Co", "Mn", "Fe", "Ni", "Zn"],
+      "peak_shift": "Decreased valence states of Co, Mn, Fe, and Ni after introducing oxygen vacancies"
+    },
+    "HAADF-STEM": "Core-shell structure with uniform distribution of metal elements in the core and oxygen vacancies",
+    "EPR": "Stronger signal for HEOs-Ov, indicating abundant oxygen vacancies"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "1.0 M KOH",
+    "overpotential_mV": {
+      "at_10_mA_cm2": "284 mV"
+    },
+    "comparison_overpotential_mV": {
+      "HEOs": {
+        "at_10_mA_cm2": "344 mV"
+      },
+      "commercial_RuO2": {
+        "overpotential_trend": "RuO2 shows lower overpotential than HEOs at low current densities, but higher at >15 mA/cm²"
+      }
+    },
+    "Tafel_slope_mV": {
+      "HEOs-Ov": "53 mV/dec",
+      "HEOs": "75 mV/dec"
+    },
+    "mass_activity_A_mg": "Not specified but higher for HEOs-Ov compared to HEOs",
+    "stability": "HEOs-Ov maintained stable performance for 200 hours at 10 mA/cm² with no significant degradation"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "The oxygen vacancies in HEOs-Ov promote *OH adsorption and deprotonation, facilitating the OER process through the Adsorbate Evolution Mechanism (AEM)."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "literature_id": "HEA-json8",
+  "doi": "10.1002/aenm.202301420",
+
+  "HEA_composition": {
+    "catalyst_name": "CoFeNiMoWTe N-HECGs",
+    "elements": ["Co", "Fe", "Ni", "Mo", "W", "Te"],
+    "composition": "Equimolar",
+    "crystal_structure": "Amorphous",
+    "average_particle_size_nm": "Porous nanosheet arrays with thickness ≈10 nm"
+  },
+
+  "synthesis": {
+    "method": "Electrochemical deposition followed by tellurization",
+    "precursors": "Co, Fe, Ni, Mo, W metal salts and Te powder",
+    "reaction_conditions": {
+      "electrodeposition_temperature_K": 323.15,
+      "electrodeposition_time": "15 min",
+      "tellurization_temperature_K": 573.15,
+      "tellurization_time": "2 hours",
+      "post_synthesis": "Dried at 60 °C after deposition, tellurization at 300 °C"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "Porous nanosheet arrays",
+      "nanosheet_thickness_nm": "≈10 nm"
+    },
+    "XRD": {
+      "crystal_structure": "Amorphous structure observed, no distinct crystalline peaks except for carbon paper peaks",
+      "lattice_constants_A": "Not explicitly mentioned"
+    },
+    "XPS": {
+      "elements_analyzed": ["Co", "Fe", "Ni", "Mo", "W", "Te"],
+      "average_valence_states_increase_due_to_Te": "Co: 2.05→2.48, Fe: 2.27→2.51, Ni: 1.88→2.44, Mo: 4.31→4.86, W: 3.92→4.44"
+    "HAADF-STEM": "Amorphous and porous nanosheet morphology",
+    "EDS": "Elemental distribution uniform, Te incorporated homogeneously"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "0.5 M H2SO4",
+    "overpotential_mV_at_10_mA_cm2": {
+      "CoFeNiMoWTe": 373,
+      "CoFeNiMoW": 395,
+      "Co3O4": 437
+    },
+    "Tafel_slope_mV_dec": {
+      "CoFeNiMoWTe": 66.8,
+      "CoFeNiMoW": 77.6,
+      "Co3O4": 96.1
+    },
+    "mass_activity": "CoFeNiMoWTe shows higher mass activity than CoFeNiMoW and Co3O4 (Figure 2g)",
+    "stability": "Stability maintained for 100 hours at 10 mA/cm² with only a 28 mV increase in overpotential"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "Enhanced OER performance attributed to the synergy of high mixed entropy and increased corrosion-resistance from Mo and W, with Te enhancing glass forming ability and catalytic active sites."
+  }
+}

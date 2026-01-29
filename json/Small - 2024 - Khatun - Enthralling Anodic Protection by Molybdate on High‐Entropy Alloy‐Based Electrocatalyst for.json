@@ -1,0 +1,69 @@
+{
+  "literature_id": "HEA-json11",
+  "doi": "10.1002/smll.202402720",
+
+  "HEA_composition": {
+    "catalyst_name": "NiFeCrVMn HEA embedded in LDH",
+    "elements": ["Ni", "Fe", "Cr", "V", "Mn"],
+    "composition": "Equimolar",
+    "crystal_structure": "FCC (solid solution) and LDH phases",
+    "average_particle_size_nm": "2–8 nm"
+  },
+
+  "synthesis": {
+    "method": "One-step solvothermal method",
+    "precursors": "Ni, Fe, Cr, V, Mn metal salts, hydrazine as reducing agent",
+    "reaction_conditions": {
+      "temperature_K": 393.15,
+      "reaction_time_h": "1–2",
+      "post_synthesis": "Annealed in air, carbon template removed"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "2–8 nm",
+      "dispersion": "Uniformly dispersed, nanosheet structure"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_constants_A": "Not specified explicitly"
+    },
+    "XPS": {
+      "elements_analyzed": ["Ni", "Fe", "Cr", "V", "Mn"],
+      "peak_shift": "Shift observed for Ni, Fe, Cr, V, and Mn due to oxidation states"
+    },
+    "HAADF-STEM": "Nanosheet structure with uniform elemental distribution",
+    "EDX_maps": "Homogeneous distribution of Ni, Fe, Cr, V, Mn in nanosheets"
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Oxygen Evolution Reaction (OER)",
+    "electrolyte": "1 M KOH, 1 M NaCl, Seawater",
+    "overpotential_mV": {
+      "at_10_mA_cm2": "230 mV for NFCVM-5"
+    },
+    "comparison_overpotential_mV": {
+      "NFCVM-5": {
+        "at_10_mA_cm2": "230 mV"
+      },
+      "NFCV": {
+        "at_10_mA_cm2": "301 mV"
+      },
+      "RuO2": {
+        "at_10_mA_cm2": "400 mV"
+      }
+    },
+    "Tafel_slope_mV": {
+      "NFCVM-5": "50 mV/dec",
+      "NFCV": "58 mV/dec",
+      "RuO2": "90 mV/dec"
+    },
+    "mass_activity_A_mg": "NFCVM-5 shows the highest mass activity among the series (per Figure S6e).",
+    "stability": "Stable for 500 hours at 1000 mA/cm² with no significant degradation"
+  },
+
+  "theoretical_computations": {
+    "reaction_mechanism": "The wide variation of the d-band center in NFCVM-5 facilitates better OER performance. Mn atoms at the surface exhibit significant electronic structure modulation, contributing to enhanced OER activity. MoO4^2- adsorbs strongly to the surface, creating a protective barrier against chloride corrosion during seawater oxidation."
+  }
+}
