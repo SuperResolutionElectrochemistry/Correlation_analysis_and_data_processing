@@ -1,0 +1,125 @@
+{
+  "literature_id": "HEA-json36",
+  "doi": "10.1002/adma.202409689",
+
+  "HEA_composition": {
+    "catalyst_name": "CoNiCuPdRu/TiO2",
+    "elements": ["Co", "Ni", "Cu", "Pd", "Ru"],
+    "crystal_structure": "FCC",
+    "support": "porous anatase TiO2",
+    "metal_loading": {
+      "each_metal_mol_percent": 1.0
+    },
+    "average_particle_size_nm": 2.6
+  },
+
+  "synthesis": {
+    "method": "impregnation–calcination–reduction",
+    "support_pretreatment": {
+      "material": "porous anatase TiO2",
+      "mass_mg": 100
+    },
+    "precursors": "individual metal precursor solutions (20 mM)",
+    "impregnation": {
+      "volume_per_metal_mL": 0.5,
+      "stirring_time_h": 1,
+      "temperature": "room temperature"
+    },
+    "drying": {
+      "temperature_K": 393.15,
+      "duration": "overnight"
+    },
+    "calcination": {
+      "temperature_K": 673.15,
+      "time_h": 2,
+      "heating_rate_K_min": 5,
+      "atmosphere": "10% H2 / 90% Ar"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "HAADF_STEM": {
+      "observation": "uniformly dispersed HEA nanoparticles on TiO2"
+    },
+    "HRTEM": {
+      "lattice_spacing_nm": 0.22,
+      "assigned_plane": "(111)",
+      "structure": "FCC"
+    },
+    "EDS_mapping": {
+      "distribution": "Co, Ni, Cu, Pd, Ru uniformly distributed within individual nanoparticles"
+    },
+    "XRD": {
+      "phase": "single-phase FCC solid-solution alloy"
+    },
+    "XPS": {
+      "metal_states": "metallic Co, Ni, Cu, Pd, Ru",
+      "post_reaction": "valence states maintained after 1000 h operation"
+    },
+    "XAFS": {
+      "edges": ["Co K", "Ni K", "Cu K", "Pd K", "Ru K"],
+      "finding": "metallic bonding with redistributed electronic structure"
+    }
+  },
+
+  "photothermal_properties": {
+    "light_source": "300 W Xe lamp",
+    "light_intensity_W_cm2": 3.0,
+    "local_temperature_under_light_K": 683.15,
+    "comparison": {
+      "Ru_TiO2_C": 601.15,
+      "bare_TiO2_C": 421.15
+    }
+  },
+
+  "catalytic_performance": {
+    "reaction": "reverse water gas shift (RWGS)",
+    "electrolyte": "gas-phase reaction",
+    "potential_scale": "not applicable",
+
+    "reaction_conditions": {
+      "feed_gas": "50% CO2 / 50% H2",
+      "flow_rate_mL_min": 30,
+      "catalyst_mass_mg": 100,
+      "pressure": "ambient"
+    },
+
+    "activity": {
+      "CO_generation_rate_mol_gmetal_h": 1.23,
+      "CO_selectivity_percent": ">99"
+    },
+
+    "stability": {
+      "continuous_operation_h": 1000,
+      "activity_retention": ">90% of initial",
+      "deactivation_rate_percent_per_h": 0.057
+    }
+  },
+
+  "mechanistic_insights": {
+    "sintering_resistance": {
+      "origin": "sluggish diffusion effect of HEA",
+      "evidence": "no particle aggregation after 1000 h"
+    },
+    "poisoning_resistance": {
+      "phenomenon": "hydrogen-mediated weakening of CO adsorption",
+      "evidence": [
+        "CO-TPD",
+        "in situ DRIFTS",
+        "kinetic isotope effect (kH/kD = 0.7)"
+      ]
+    }
+  },
+
+  "theoretical_computations": {
+    "method": "density functional theory (DFT)",
+    "model": "TiO2(101)-supported HEA cluster",
+    "CO_adsorption": {
+      "most_stable_site": "Ru–Ni bridge site",
+      "Ead_without_H_eV": -2.626,
+      "Ead_with_partial_H_eV": -2.473,
+      "Ead_with_saturated_H_eV": -2.220
+    },
+    "mechanistic_conclusion": "surface hydrogen coverage weakens CO binding and suppresses catalyst poisoning"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "literature_id": "HEA-json40",
+  "doi": "10.1016/j.matt.2022.09.023",
+
+  "HEA_composition": {
+    "material_type": "Pt-based high-entropy alloy nanowires",
+    "dimensionality": "one-dimensional nanowires",
+    "elements_pool": ["Pt", "Mo", "Rh", "Ir", "Ru", "Co", "Ni", "Fe", "Mn", "Cr"],
+    "number_of_elements_range": "3–10",
+    "HEA_definition": "each element within 5–35 at.%",
+    "representative_compositions": {
+      "3_NWs": ["Pt", "Rh", "Mo"],
+      "5_HEA_NWs": ["Pt", "Rh", "Mo", "Ir", "Ru"],
+      "10_HEA_NWs": ["Pt", "Rh", "Mo", "Ir", "Co", "Ru", "Fe", "Ni", "Mn", "Cr"]
+    },
+    "crystal_structure": "FCC single-phase solid solution"
+  },
+
+  "synthesis": {
+    "method": "reduction–diffusion strategy",
+    "solvent": "oleylamine",
+    "surfactant": "DTAC",
+    "additives": ["glucose", "Mo(CO)6"],
+    "precursors": "metal acetylacetonates and Mo(CO)6",
+    "reaction_temperature_range_K": "453.15–493.15",
+    "reaction_time_h": "1–1.5",
+    "key_process": [
+      "initial formation of ultrathin Pt nanowires",
+      "subsequent reduction and atomic diffusion of other metals into Pt nanowires"
+    ]
+  },
+
+  "physicochemical_characterization": {
+    "TEM_STEM": {
+      "morphology": "ultrathin one-dimensional nanowires",
+      "elemental_distribution": "homogeneous distribution of all elements without phase segregation"
+    },
+    "XRD": {
+      "structure": "face-centered cubic (FCC)",
+      "feature": "single-phase solid solution for all multimetallic nanowires"
+    },
+    "AC_HAADF_STEM": {
+      "lattice_distortion": "severe lattice distortion observed in high-entropy nanowires",
+      "comparison": "greater distortion in 10-HEA NWs than in 3-component NWs"
+    },
+    "lattice_spacing_nm": {
+      "3_NWs_PtRhMo": 0.225,
+      "10_HEA_NWs": 0.214
+    },
+    "strain_analysis": {
+      "method": "geometrical phase analysis (GPA)",
+      "result": "larger strain fluctuation in 10-HEA NWs"
+    },
+    "XAFS": {
+      "Pt_Pt_bond_length_A": {
+        "3_NWs": 2.28,
+        "10_HEA_NWs": 2.24
+      },
+      "derived_strain": "compressive strain of ~1.8% in 10-HEA NWs"
+    },
+    "XPS": {
+      "Pt_4f_shift_eV": "0.2",
+      "interpretation": "electron transfer from alloying elements to Pt"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reactions": ["hydrogen oxidation reaction (HOR)", "hydrogen evolution reaction (HER)"],
+    "electrolyte": "0.1 M KOH",
+    "potential_scale": "RHE",
+
+    "HOR_performance": {
+      "representative_catalyst": "5-HEA NWs",
+      "exchange_current_density_mA": 1.25,
+      "mass_normalized_exchange_current_density_A_mg_PtRu": 0.7,
+      "kinetic_current_density_A_mg_PtRu_at_50mV": 5.8
+    },
+
+    "CO_tolerance": {
+      "CO_concentration_ppm": 1000,
+      "limiting_current_density_drop_percent": 3.7,
+      "chronoamperometry": {
+        "potential_V": 0.1,
+        "duration_s": 2000,
+        "current_loss_percent": 18.9
+      }
+    },
+
+    "HER_performance": {
+      "representative_catalyst": "10-HEA NWs",
+      "overpotential_mV_at_10_mA_cm2": 24,
+      "mass_activity_A_mg_Pt_at_0.05V": 6.0
+    }
+  },
+
+  "mechanistic_insights": {
+    "formation_mechanism": [
+      "preferential reduction of Pt at early stage",
+      "sequential reduction of other metals with increasing temperature",
+      "atomic diffusion-driven alloy homogenization"
+    ],
+    "high_entropy_effects": [
+      "severe lattice distortion",
+      "broadened strain distribution",
+      "modulated Pt electronic structure"
+    ],
+    "catalytic_origin": "synergistic ligand and strain effects induced by high-entropy configuration"
+  }
+}

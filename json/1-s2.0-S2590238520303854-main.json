@@ -1,0 +1,62 @@
+{
+  "literature_id": "HEA-json34",
+  "doi": "10.1016/j.matt.2020.07.027",
+
+  "HEA_composition": {
+    "catalyst_name": "Unconventional alloy nanoparticles (multi-element)",
+    "elements": "various dissimilar metals (composition tunable by electrode materials)",
+    "crystal_structure": "not explicitly specified",
+    "structure_feature": "nanoparticles produced by rapid quenching",
+    "support": "carbon paper, filter membrane, TEM grid, Si wafer, ITO glass (depending on application)"
+  },
+
+  "synthesis": {
+    "method": "spark discharge-based vapor quenching (\"sparking mashup\")",
+    "precursors": "bulk metal electrodes as elemental sources",
+    "carrier_gas": "Ar/H2 (1:1 volume ratio)",
+    "process_feature": [
+      "microsecond-scale spark oscillation",
+      "rapid vaporization and quenching",
+      "composition controlled by electrode pairing and discharge parameters"
+    ],
+    "reaction_temperature": "not explicitly specified",
+    "reaction_time": "microsecond-scale discharge events"
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "nanoparticles with narrow size distributions",
+      "size_distribution": "reported from TEM statistics (exact mean values not uniformly specified)"
+    },
+    "Cs_STEM_EDX": {
+      "distribution": "homogeneous elemental mixing within individual nanoparticles"
+    },
+    "XRD": {
+      "phase": "crystalline alloy phases observed",
+      "note": "phase depends on elemental combination"
+    },
+    "XPS": {
+      "finding": "metallic states dominate; surface oxidation suppressed by H2-containing atmosphere"
+    }
+  },
+
+  "electrochemical_performance": {
+    "application": "fuel-cell electrocatalysis",
+    "electrolyte": "not explicitly specified",
+    "potential_scale": "not explicitly specified",
+
+    "ORR": {
+      "finding": "demonstrated as high-performance fuel-cell catalysts",
+      "quantitative_metrics": "not explicitly provided in a unified form"
+    }
+  },
+
+  "manufacturing_and_applications": {
+    "additive_manufacturing": {
+      "capability": "alloy nanoparticles compatible with 3D nanostructural array fabrication"
+    },
+    "scalability": {
+      "feature": "broad compositional space accessible without conventional alloying constraints"
+    }
+  }
+}

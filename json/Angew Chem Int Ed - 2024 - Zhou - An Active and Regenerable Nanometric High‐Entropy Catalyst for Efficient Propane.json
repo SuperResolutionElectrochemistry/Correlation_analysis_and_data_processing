@@ -1,0 +1,111 @@
+{
+  "literature_id": "HEA-json38",
+  "doi": "10.1002/anie.202410835",
+
+  "HEA_composition": {
+    "catalyst_name": "MnCoCuZnPt/SiO2 (0.5PtHEA/SiO2)",
+    "elements": ["Mn", "Co", "Cu", "Zn", "Pt"],
+    "nominal_atomic_ratio": "Mn:Co:Cu:Zn:Pt = 1:1:1:1:1",
+    "support": "low-acidity porous SiO2",
+    "crystal_structure": "FCC (after H2 reduction)",
+    "average_particle_size_nm": 1.5,
+    "configurational_entropy_R": 1.61
+  },
+
+  "synthesis": {
+    "method": "high-entropy oxide precursor formation + hydrogen reduction",
+    "oxide_precursor": "Pt-incorporated high-entropy oxide (PtHEO)",
+    "calcination": {
+      "temperature_K": 773.15,
+      "atmosphere": "air"
+    },
+    "reduction": {
+      "temperature_K": 873.15,
+      "time_h": 2,
+      "atmosphere": "20% H2 / Ar"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "oxide_phase": "single-phase spinel structure (PtHEO)",
+      "reduced_phase": "single-phase FCC alloy",
+      "feature": "diffraction peaks shift to lower angles due to lattice expansion"
+    },
+    "HAADF_STEM": {
+      "observation": "uniformly dispersed nanoparticles on SiO2 support"
+    },
+    "AC_STEM_ADF": {
+      "feature": "atomically dispersed Pt sites within nanoparticles"
+    },
+    "EDS_mapping": {
+      "distribution": "Mn, Co, Cu, Zn, and Pt uniformly distributed"
+    },
+    "particle_size_distribution": {
+      "mean_nm": 1.5,
+      "spent_catalyst_mean_nm": 1.4
+    },
+    "XPS": {
+      "Pt_state": "positively charged Pt (binding energy shift to higher values)",
+      "Mn_state": ["Mn2+", "Mn0"],
+      "Co_state": "Co0",
+      "Cu_state": "Cu0",
+      "Zn_state": ["Zn0", "Zn2+"]
+    },
+    "XAFS": {
+      "Pt_L3_edge": {
+        "finding": "Pt predominantly metallic with positive charge",
+        "Pt_M_coordination_number": 2.4,
+        "Pt_O_coordination_number": 1.0
+      }
+    }
+  },
+
+  "catalytic_performance": {
+    "reaction": "propane dehydrogenation (PDH)",
+    "reaction_temperature_K": 873.15,
+    "pressure": "atmospheric",
+    "feed_gas": "C3H8/H2/N2 = 1/1/8",
+
+    "activity": {
+      "initial_propane_conversion_percent": 56.6,
+      "propylene_selectivity_percent": 94.0,
+      "propylene_productivity_mol_C3H6_gPt_h": 68.5,
+      "WHSV_h-1": 60
+    },
+
+    "stability": {
+      "reaction_temperature_K": 823.15,
+      "time_h": 200,
+      "deactivation_rate_constant_h-1": 0.0004,
+      "final_propane_conversion_percent": ">18.1",
+      "propylene_selectivity_percent": 93
+    },
+
+    "regeneration": {
+      "regeneration_method": "air calcination followed by H2 reduction",
+      "air_calcination": {
+        "temperature_K": 773.15,
+        "time_min": 30
+      },
+      "cycles": 4,
+      "performance_retention": "negligible loss after four cycles"
+    }
+  },
+
+  "mechanistic_insights": {
+    "high_entropy_effect": [
+      "thermodynamic entropy stabilization",
+      "sluggish diffusion suppressing sintering"
+    ],
+    "Pt_isolation": "Pt atoms isolated by coordination with Mn, Co, Cu, and Zn",
+    "CO_adsorption": {
+      "CO_DRIFTS": "weakened CO adsorption on Pt sites",
+      "interpretation": "suppressed deep dehydrogenation and coke formation"
+    },
+    "coke_behavior": {
+      "coke_location": "primarily on SiO2 support",
+      "coke_content_200h_wt_percent": 4.3
+    }
+  }
+}

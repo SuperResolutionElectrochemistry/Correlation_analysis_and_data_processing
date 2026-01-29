@@ -1,0 +1,97 @@
+{
+  "literature_id": "HEA-json39",
+  "doi": "10.1021/jacs.3c03713",
+
+  "HEA_composition": {
+    "catalyst_name": "15-UMEA",
+    "elements": ["Bi", "Co", "Cu", "Fe", "Ga", "In", "Ir", "Ni", "Pd", "Pt", "Rh", "Ru", "Sb", "Sn", "Ti"],
+    "number_of_elements": 15,
+    "element_groups": "group IV to XV elements (early d-block to p-block)",
+    "nominal_composition": "approximately equiatomic (XRF-consistent with nominal feed)",
+    "configurational_entropy_threshold": ">1.5R",
+    "average_particle_size_nm": 1.9,
+    "particle_size_distribution_nm": "1.9 ± 0.6",
+    "support": "carbon (for electrochemical measurements)"
+  },
+
+  "synthesis": {
+    "method": "continuous-flow chemical reduction",
+    "reactor_type": "benchtop 4-way flow reactor with sequential injection",
+    "reducing_agent": "lithium naphthalenide (LiNaph)",
+    "solvent": "tetrahydrofuran (THF)",
+    "precursor_grouping": {
+      "Group_1": ["Co", "Fe", "Ti"],
+      "Group_2": ["Bi", "Ga", "In", "Ni", "Sb", "Sn"],
+      "Group_3": ["Cu", "Ir", "Pd", "Pt", "Rh", "Ru"]
+    },
+    "injection_strategy": "sequential injection from slower to faster reduction groups",
+    "reaction_temperature_K": 339.15,
+    "post_synthesis": "mixing with carbon dispersion at reactor outlet"
+  },
+
+  "physicochemical_characterization": {
+    "HAADF_STEM": {
+      "observation": "homogeneously dispersed ultrasmall nanoparticles",
+      "evidence": "Figures 1c, S1"
+    },
+    "STEM_EDX": {
+      "mapping": "all 15 elements detected in individual nanoparticles",
+      "point_analysis": "50 randomly selected particles",
+      "finding": "80% of particles contain 14 or 15 elements"
+    },
+    "XRF": {
+      "finding": "overall composition ~50% PGMs and 50% non-PGMs"
+    },
+    "XRD": {
+      "feature": "very weak and broad diffraction peaks",
+      "interpretation": "noncrystalline or amorphous-like structure"
+    },
+    "PDF_analysis": {
+      "structure": "metallic amorphous-like structure with short-range order",
+      "metal_metal_bond_peak_A": 2.6
+    },
+    "HAXPES": {
+      "valence_band": "featureless broad distribution",
+      "interpretation": "diverse local electronic structures"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "alcohol oxidation reactions (AORs)",
+    "electrolyte": "1 M KOH",
+    "potential_scale": "vs RHE",
+
+    "alcohols_tested": ["ethanol", "1-propanol", "1-butanol"],
+
+    "activity": {
+      "cyclic_voltammetry": "higher current density than 5-MEA, 10-MEA, Pt, and Pd for all AORs",
+      "trend": "maximum current density increases with carbon number from ethanol to butanol"
+    },
+
+    "selectivity_and_completeness": {
+      "if_ib_ratio": ">7 for all AORs",
+      "interpretation": "enhanced complete oxidation and high CO poisoning tolerance"
+    },
+
+    "stability": {
+      "chronoamperometry": {
+        "potential_V": 0.7,
+        "duration_h": 1,
+        "finding": "current density maintained for 15-UMEA, while Pd decays to near zero"
+      }
+    }
+  },
+
+  "mechanistic_insights": {
+    "high_entropy_effect": [
+      "diverse local electronic structures",
+      "multiple adsorption/desorption sites"
+    ],
+    "reaction_promotion": [
+      "facilitated C–C bond cleavage",
+      "enhanced OH− adsorption at low potential",
+      "accelerated oxidation of COad intermediates"
+    ],
+    "structure_property_relation": "ultra-multielement interactions enable multistep complete alcohol oxidation"
+  }
+}

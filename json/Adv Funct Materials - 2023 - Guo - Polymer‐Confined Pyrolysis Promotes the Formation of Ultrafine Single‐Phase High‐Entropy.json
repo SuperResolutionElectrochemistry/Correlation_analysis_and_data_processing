@@ -1,0 +1,116 @@
+{
+  "literature_id": "HEA-json35",
+  "doi": "10.1002/adfm.202308229",
+
+  "HEA_composition": {
+    "catalyst_name": "AuPdPtRhIr HEA@C",
+    "elements": ["Au", "Pd", "Pt", "Rh", "Ir"],
+    "atomic_ratio_surface": "Au:Pd:Pt:Rh:Ir = 0.85:1.24:1.14:1.00:0.98 (XPS)",
+    "atomic_ratio_bulk": "Au:Pd:Pt:Rh:Ir = 0.85:1.18:1.12:1.00:0.92 (ICP-OES)",
+    "crystal_structure": "FCC",
+    "average_particle_size_nm": 5,
+    "support": "PVA-derived porous carbon (pomegranate-like structure)",
+    "HEA_weight_fraction_percent": 41.1
+  },
+
+  "synthesis": {
+    "method": "polymer-confined hydrothermal synthesis + solid-phase diffusion pyrolysis",
+    "polymer": "polyvinyl alcohol (PVA)",
+    "precursors": [
+      "KAuCl4",
+      "K2PdCl4",
+      "K2PtCl6",
+      "K3RhCl3",
+      "K2IrCl6"
+    ],
+    "hydrothermal_conditions": {
+      "temperature_K": 493.15,
+      "time_h": 12
+    },
+    "pyrolysis_conditions": {
+      "temperature_K": 1273.15,
+      "time_h": 2,
+      "atmosphere": "Ar",
+      "heating_rate_K_min": 5
+    }
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "phase": "single-phase FCC solid solution after pyrolysis",
+      "in_situ_XRD": "Au phase gradually disappears between 600–1000 °C, forming single-phase HEA"
+    },
+    "TEM": {
+      "morphology": "ultrafine HEA nanoparticles embedded in carbon microspheres",
+      "carbon_sphere_size_nm": 1200,
+      "particle_dispersion": "highly dispersed without agglomeration"
+    },
+    "HRTEM": {
+      "assigned_planes": ["(111)", "(200)"]
+    }，
+    "HAADF_STEM_EDX": {
+      "distribution": "Au, Pd, Pt, Rh, Ir uniformly and randomly distributed"
+    },
+    "BET": {
+      "specific_surface_area_m2_g": 276.2,
+      "pore_volume_cm3_g": 0.31,
+      "pore_size_range_nm": "0.3–2.0"
+    },
+    "XPS": {
+      "metal_states": "metallic Au, Pd, Pt, Rh, Ir",
+      "binding_energy_shift": "no obvious shift after NOR stability test"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "nitrogen oxidation reaction (NOR)",
+    "electrolyte": "0.1 M K2SO4",
+    "potential_scale": "vs RHE",
+
+    "NOR_activity": {
+      "maximum_NO3_yield_rate_ug_h_mgcat": 23.8,
+      "potential_at_max_yield_V": 1.9,
+      "maximum_Faradaic_efficiency_percent": 13.8,
+      "potential_at_max_FE_V": 1.7
+    },
+
+    "stability": {
+      "continuous_operation_h": 20,
+      "NO3_production_mg_mgcat": 0.41,
+      "structural_stability": "no particle agglomeration after long-term NOR"
+    }
+  },
+
+  "in_situ_and_operando_characterization": {
+    "operando_FTIR": {
+      "observed_intermediates_cm-1": {
+        "NO3-": 1380,
+        "NO*": 1530
+      }
+    },
+    "DEMS": {
+      "detected_species_mz": [30, 44, 45, 46, 61],
+      "assignment": ["NO", "N2O/CO2", "N2OH", "NO2", "N2O2H"]
+    },
+    "isotope_labeling": {
+      "15N2": "15NO3- detected",
+      "conclusion": "N source originates from N2"
+    }
+  },
+
+  "theoretical_computations": {
+    "method": "density functional theory (DFT)",
+    "surfaces": ["HEA(111)", "HEA(200)"],
+    "active_sites": "Rh–Ir–o site on HEA(200)",
+    "N2_adsorption": {
+      "mode": "side-on",
+      "DeltaG_N2_eV": -0.34,
+      "DeltaG_N2OH_eV": 1.36
+    },
+    "rate_determining_step": "*N2 → *N2OH",
+    "mechanistic_role": {
+      "Rh_Ir": "electron donors and mediators",
+      "Au_Pd_Pt": "electron reservoirs"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "literature_id": "HEA-json37",
+  "doi": "10.1002/anie.202304510",
+
+  "HEA_composition": {
+    "catalyst_name": "PdAgSn/PtBi HEA NPs",
+    "elements": ["Pd", "Ag", "Sn", "Pt", "Bi"],
+    "overall_composition": "Pd3Ag1Sn1Pt3Bi1 (ICP-OES)",
+    "crystal_structure": "FCC",
+    "structure_feature": "Pd-enriched HEA core / Pt-enriched HEA shell",
+    "average_particle_size_nm": 10.3,
+    "configuration_entropy_R": 1.48
+  },
+
+  "synthesis": {
+    "method": "facile wet-chemical co-reduction",
+    "precursors": [
+      "Pt(acac)2",
+      "Pd(acac)2",
+      "AgNO3",
+      "Bi(NO3)3·5H2O",
+      "SnCl2·2H2O"
+    ],
+    "solvent": "oleylamine",
+    "reducing_agent": "vitamin C",
+    "reaction_temperature_K": 433.15,
+    "reaction_time_h": 1,
+    "post_treatment": "washing with cyclohexane/ethanol (1:4 v/v)"
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "uniform nanoparticles with core–shell contrast",
+      "particle_size_nm": 10.3
+    },
+    "HAADF_STEM": {
+      "feature": "bright core and darker shell indicating compositional segregation"
+    },
+    "SAED": {
+      "structure": "single-phase FCC"
+    },
+    "EDS_mapping": {
+      "distribution": {
+        "core_enriched": ["Pd", "Ag", "Sn"],
+        "shell_enriched": ["Pt", "Bi"]
+      }
+    },
+    "XRD": {
+      "phase": "single-phase FCC solid solution",
+      "assigned_planes": ["(111)", "(200)", "(220)", "(311)"],
+      "tensile_strain_percent": 1.39
+    },
+    "XPS": {
+      "Pt_4f7_2_eV": 70.8,
+      "Pd_3d5_2_eV": 335.13,
+      "Ag_3d5_2_eV": 367.6,
+      "Bi_4f7_2_eV": 157.3,
+      "Sn_3d5_2_eV": 487.0,
+      "metal_states": "all elements predominantly metallic"
+    }
+  },
+
+  "electrochemical_performance": {
+    "electrolyte": "1.0 M KOH",
+    "potential_scale": "vs RHE",
+
+    "MOR": {
+      "mass_activity_mA_mg_PdPt": 2874,
+      "specific_activity_mA_cm2": 4.7,
+      "comparison": {
+        "vs_Pd_C": "5.9-fold higher mass activity",
+        "vs_Pt_C": "4.8-fold higher mass activity"
+      },
+      "ECSA_m2_g_PdPt": 61.5
+    },
+
+    "EOR": {
+      "mass_activity_mA_mg_PdPt": 3386,
+      "comparison": {
+        "vs_Pd_C": "5.4-fold higher mass activity",
+        "vs_Pt_C": "4.9-fold higher mass activity"
+      }
+    },
+
+    "stability": {
+      "chronoamperometry_duration_s": 7200,
+      "mass_activity_retention_percent": {
+        "MOR": 46.2,
+        "EOR": 54.6
+      },
+      "CV_cycles_EOR": 500,
+      "mass_activity_retention_after_CV_percent": 47.5
+    }
+  },
+
+  "mechanistic_analysis": {
+    "strain_effect": "tensile strain induced by atomic size mismatch between core and shell",
+    "ligand_effect": "electronic interaction among Pd, Pt, Ag, Bi, and Sn alters d-band centers",
+    "synergistic_sites": "Pt sites favor C–H and O–H bond breaking; Pd sites weaken CO* adsorption",
+    "dominant_EOR_pathway": "C2 pathway (CH3COOH formation)"
+  },
+
+  "theoretical_computations": {
+    "method": "density functional theory (DFT)",
+    "model": "HEA (111) slab with PtBi-enriched shell and PdAgSn-enriched core",
+    "electronic_structure": {
+      "d_band_center_trend": "Pt sites shift positively; Pd sites shift negatively relative to EF"
+    },
+    "EOR_mechanism": {
+      "rate_determining_step": "CH3CO* oxidation in C2 pathway",
+      "site_dependence": {
+        "Pt_sites": "facilitate C–H bond cleavage",
+        "Pd_sites": "facilitate CO* oxidation"
+      }
+    }
+  }
+}
