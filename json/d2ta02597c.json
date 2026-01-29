@@ -1,0 +1,99 @@
+{
+  "literature_id": "HEA-json31",
+  "doi": "10.1039/d2ta02597c",
+
+  "HEA_composition": {
+    "catalyst_name": "PdCuMoNiCo NHSs/RGO3-CNT",
+    "elements": ["Pd", "Cu", "Mo", "Ni", "Co"],
+    "crystal_structure": "FCC",
+    "structure_feature": "nano-hollow spherical structure",
+    "support": "reduced graphene oxide / carbon nanotube hybrid (GO:O-CNT = 3:1)",
+    "average_particle_diameter_nm": 18.5,
+    "shell_thickness_nm": 4.0
+  },
+
+  "synthesis": {
+    "method": "one-pot solvothermal synthesis",
+    "precursors": "metal salt precursors of Pd, Cu, Mo, Ni and Co",
+    "ligand": "glutamic acid (removable ligand)",
+    "solvent": "ethylene glycol",
+    "pH": 13,
+    "reaction_temperature_K": 433.15,
+    "reaction_time_h": 7,
+    "post_treatment": [
+      "washing with water and ethanol",
+      "lyophilization",
+      "perchloric acid treatment before characterization"
+    ]
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "uniform hollow spheres dispersed on carbon hybrid",
+      "average_diameter_nm": 18.5,
+      "shell_thickness_nm": 4.0
+    },
+    "HRTEM": {
+      "lattice_spacing_nm": 0.229,
+      "assigned_plane": "(111)"
+    },
+    "HAADF_STEM": {
+      "feature": "clear hollow interior and uniform contrast"
+    },
+    "EDS_mapping": {
+      "distribution": "Pd, Cu, Mo, Ni and Co uniformly distributed"
+    },
+    "XRD": {
+      "phase": "single-phase FCC solid solution",
+      "feature": "positive shift of Pd(111) peak due to multi-element alloying"
+    },
+    "XPS": {
+      "Pd_3d": "binding energy shift indicating electronic structure modulation",
+      "elemental_states": "predominantly metallic Pd, Cu, Mo, Ni and Co",
+      "atomic_ratio": "Pd:Cu:Mo:Ni:Co ≈ 34:16:5:28:17 (after acid treatment)"
+    }
+  },
+
+  "electrochemical_performance": {
+    "electrolyte": "0.1 M HClO4",
+    "potential_scale": "vs RHE",
+
+    "ORR": {
+      "half_wave_potential_V": 0.86,
+      "limiting_current_density_mA_cm2": 5.1,
+      "Tafel_slope": "lower than PdCuMoNiCo solid nanoparticles and comparable to Pt/C",
+      "mass_activity_A_mgPd_at_0_8V": 0.882,
+      "electron_transfer_number": {
+        "K_L": 3.92,
+        "RRDE": 3.98
+      },
+      "H2O2_yield_percent": 0.62,
+      "stability": {
+        "test_potential_V": 0.5,
+        "duration_h": 20,
+        "current_retention_percent": 84.7
+      }
+    },
+
+    "FAO": {
+      "electrolyte": "0.1 M HClO4 + 0.5 M HCOOH",
+      "peak_current_density_mA_cm2": 70.96,
+      "onset_potential_V": 0.147,
+      "mass_activity_A_mgPd": 8.030,
+      "stability": {
+        "test_potential_V": 0.5,
+        "duration_s": 7000,
+        "remaining_mass_activity_A_mgPd": 0.38
+      }
+    }
+  },
+
+  "structure_property_relationship": {
+    "key_factors": [
+      "high-entropy alloy effect",
+      "hollow structure",
+      "regulated lattice strain"
+    ],
+    "finding": "mass activity negatively correlated with lattice strain; hollow HEA exhibits smallest strain (~1.39%) and highest activity"
+  }
+}

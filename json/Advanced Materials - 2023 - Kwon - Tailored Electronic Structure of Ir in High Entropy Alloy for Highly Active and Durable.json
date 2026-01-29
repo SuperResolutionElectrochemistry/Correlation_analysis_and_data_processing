@@ -1,175 +1,121 @@
 {
-  "literature_id": "HEA-json23",
+  "literature_id": "HEA-json29",
   "doi": "10.1002/adma.202300091",
 
   "HEA_composition": {
-    "catalyst_family": "ZnNiCoIrX (X = Fe, Mn)",
-    "key_composition_reported": "ZnNiCoIrMn",
-    "initial_precursor_ratio": "Zn4(NiCoIrX)1",
-    "after_dealloying": "Zn0.5(NiCoIrX)1 (denoted ZnNiCoIrX)",
-    "crystal_structure": "FCC solid solution",
-    "lattice_spacing_A": 2.18,
-    "morphology": "nanoporous structure after Zn dealloying"
+    "catalyst_name": "ZnNiCoIrMn HEA",
+    "elements": ["Zn", "Ni", "Co", "Ir", "Mn"],
+    "crystal_structure": "FCC",
+    "structure_feature": "nanoporous structure after Zn dealloying",
+    "note": "Zn used as sacrificial element; final composition denoted as ZnNiCoIrX (X = Fe or Mn)"
   },
 
   "synthesis": {
-    "method": "sol–gel + in situ reduction + vacuum dealloying",
-
-    "key_steps": {
-      "sol_gel": {
-        "drying_temperature_K": 353.15,
-        "intermediate": "metal–glycine complex"
-      },
-
-      "in_situ_reduction": {
-        "temperature_K": 723.15,
-        "atmosphere": "Ar + H2",
-        "outcome": "single-phase Zn-rich HEA (~200 nm spheres)"
-      },
-
-      "dealloying": {
-        "sacrificial_element": "Zn",
-        "method": "high-vacuum vapor dealloying",
-        "purpose": "create nanoporous structure while retaining high crystallinity"
-      }
-    }
+    "method": "sol–gel synthesis followed by vacuum dealloying",
+    "precursors": "metal nitrate sols with glycine",
+    "drying_temperature_K": 353.15,
+    "reduction_temperature_K": 723.15,
+    "atmosphere": "Ar/H2",
+    "dealloying_method": "high-vacuum vapor dealloying",
+    "sacrificial_element": "Zn"
   },
 
   "physicochemical_characterization": {
     "XRD": {
-      "phase": "FCC (single solid-solution phase)",
-      "note": "no phase transition after Zn removal; crystallinity preserved"
+      "phase": "single-phase FCC",
+      "note": "no phase transition before and after Zn dealloying"
     },
-
     "STEM": {
-      "after_dealloying": "clear nanoporous structure",
-      "before_dealloying": "dense solid structure"
+      "morphology": "nanoporous structure after dealloying"
     },
-
-    "HRTEM_SAED": {
-      "lattice_spacing_A": 2.18,
-      "plane": "(111) of FCC",
-      "SAED": "single-crystal pattern"
+    "HRTEM": {
+      "lattice_spacing_nm": 0.218,
+      "assigned_plane": "(111)"
     },
-
-    "EDX_mapping": "homogeneous distribution of all five elements",
-
+    "SAED": {
+      "feature": "single-crystal diffraction pattern"
+    },
+    "EDS_mapping": {
+      "distribution": "homogeneous distribution of Zn, Ni, Co, Ir, and Mn"
+    },
     "XPS": {
-      "Ir_4f_shift_trend": [
-        "ZnNiIr > ZnNiCoIr > ZnNiCoIrFe > ZnNiCoIrMn (toward lower binding energy)"
-      ],
-      "interpretation": "electron transfer from 3d metals to Ir; Mn induces the largest shift"
+      "Ir_4f": "binding energy shifts to lower values with increasing alloying elements",
+      "interpretation": "electron transfer from 3d transition metals to Ir; Mn induces the largest shift"
     }
   },
 
   "electrochemical_performance": {
-    "electrolyte": "0.1 M HClO4 (acidic)",
+    "electrolyte": "0.1 M HClO4",
+    "potential_scale": "vs RHE",
 
     "HER": {
       "overpotential_mV_at_-50_mA_cm2": {
-        "ZnNiIr": 101,
-        "ZnNiCoIr": 72,
-        "ZnNiCoIrFe": 55,
         "ZnNiCoIrMn": 50
       },
       "Tafel_slope_mV_dec": {
-        "ZnNiCoIrMn": 30.6,
-        "Pt_C": 33.6
+        "ZnNiCoIrMn": 30.6
       },
-      "ECSA_normalized_overpotential_mV_at_0_05_mA_cm2": {
-        "ZnNiCoIrMn": 35
-      },
-      "mass_activity_A_gIr": {
-        "ZnNiCoIrMn": 675.3,
-        "Pt_C": 489.7,
-        "condition": "at 50 mV overpotential"
-      },
-      "activation_energy_kJ_mol": {
-        "ZnNiCoIrMn": 30.19
-      },
-      "TOF_s_1_at_30mV": {
-        "ZnNiCoIrMn": 6.4,
-        "ZnNiCoIrFe": 4.06
-      },
-      "stability_100h_10mA_cm2": {
-        "initial_potential_mV": -56,
-        "final_potential_mV": -72.8,
-        "increase_mV": 16.8
+      "mass_activity_A_gIr_at_50_mV": 675.3,
+      "mechanism": "Tafel step as rate-determining",
+      "stability": {
+        "test_method": "chronopotentiometry",
+        "current_density_mA_cm2": 10,
+        "duration_h": 100,
+        "potential_increase_mV": 16.8
       }
     },
 
     "OER": {
       "overpotential_mV_at_10_mA_cm2": {
-        "ZnNiCoIrMn": 237,
-        "ZnNiCoIrFe": 250,
-        "ZnNiCoIr": 263
+        "ZnNiCoIrMn": 237
       },
       "Tafel_slope_mV_dec": {
         "ZnNiCoIrMn": 46
       },
-      "ECSA_normalized_overpotential_mV_at_0_05_mA_cm2": {
-        "ZnNiCoIrMn": 258
-      },
-      "mass_activity_A_gIr_at_1_5V": {
-        "ZnNiCoIrMn": 610.8,
-        "Ir_C": 122.8
-      },
-      "activation_energy_kJ_mol": {
-        "ZnNiCoIrMn": 31.31
-      },
-      "TOF_s_1_at_270mV": {
-        "ZnNiCoIrMn": 7.53,
-        "ZnNiCoIrFe": 5.37
-      },
-      "stability_100h_10mA_cm2": {
-        "steady_voltage_V": 1.52,
-        "behavior": "initial gradual rise then stable plateau"
-      }
-    },
-
-    "dissolution_and_stability_metrics": {
-      "normalized_Ir_dissolution_ug_mg": {
-        "HER_12h": 1.7,
-        "OER_12h": 2.6
-      },
-      "S_number": {
-        "HER": "3.4 × 10^5 n_H2 / n_Ir",
-        "OER": "2.4 × 10^5 n_O2 / n_Ir"
+      "mass_activity_A_gIr_at_1_5V": 610.8,
+      "stability": {
+        "test_method": "chronopotentiometry",
+        "current_density_mA_cm2": 10,
+        "duration_h": 100,
+        "operating_potential_V_vs_RHE": 1.52
       }
     }
   },
 
   "theoretical_computations": {
-    "models": {
-      "systems": ["ZnNiCoIr", "ZnNiCoIrMn"],
-      "surface": "Ir on (111) plane in random HEA supercell"
+    "method": "density functional theory (DFT)",
+    "models": [
+      "ZnNiCoIr",
+      "ZnNiCoIrMn"
+    ],
+    "electronic_structure": {
+      "d_band_center_eV": {
+        "ZnNiCoIr": -2.14,
+        "ZnNiCoIrMn": -2.31
+      },
+      "effect_of_Mn": "downshift of Ir d-band center away from Fermi level"
     },
-
-    "d_band_centers_eV": {
-      "ZnNiCoIr": -2.14,
-      "ZnNiCoIrMn": -2.31
+    "HER_related": {
+      "descriptor": "hydrogen binding energy",
+      "trend": "weaker H binding on ZnNiCoIrMn than ZnNiCoIr"
     },
-
-    "hydrogen_binding_energy": {
-      "trend": "weaker for ZnNiCoIrMn than ZnNiCoIr",
-      "correlation": "more negative d-band center → weaker H binding → higher HER activity"
-    },
-
-    "OER_energy_barrier_eV": {
-      "rate_determining_step": {
+    "OER_related": {
+      "rate_determining_step": "HOO* formation",
+      "energy_barrier_eV": {
         "ZnNiCoIr": 2.13,
         "ZnNiCoIrMn": 1.99
-      },
-      "minimum_energy_for_spontaneous_OER": {
-        "ZnNiCoIr": 2.63,
-        "ZnNiCoIrMn": 2.12
       }
-    },
+    }
+  },
 
-    "mechanistic_conclusion": [
-      "Mn incorporation shifts Ir d-band away from Fermi level",
-      "weaker HO*/O* binding lowers OER barrier",
-      "enhances both activity and stability"
-    ]
+  "stability_metrics": {
+    "S_number": {
+      "HER": "3.4 × 10^5 n_hydrogen n_Ir^-1",
+      "OER": "2.4 × 10^5 n_oxygen n_Ir^-1"
+    },
+    "Ir_dissolution": {
+      "HER_ug_mgIr": 1.7,
+      "OER_ug_mgIr": 2.6
+    }
   }
 }

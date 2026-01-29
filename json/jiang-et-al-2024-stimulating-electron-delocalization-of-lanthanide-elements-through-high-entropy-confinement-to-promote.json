@@ -1,0 +1,140 @@
+{
+  "literature_id": "HEA-json32",
+  "doi": "10.1021/acsnano.4c04176",
+
+  "HEA_composition": {
+    "catalyst_name": "PtRuFeCoNiZn-RE/C",
+    "elements": ["Pt", "Ru", "Fe", "Co", "Ni", "Zn", "RE"],
+    "RE_elements_screened": ["La", "Ce", "Pr", "Nd", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Y"],
+    "representative_catalyst": "PtRuFeCoNiZn-Ce/C",
+    "atomic_ratio": "Pt:Ru:Fe:Co:Ni:Zn ≈ 1:1:1:1:1:1 (ICP-OES)",
+    "crystal_structure": "FCC",
+    "support": "carbon nanotubes (CNT)",
+    "structure_feature": "high-entropy alloy nanoparticles uniformly dispersed on CNT"
+  },
+
+  "synthesis": {
+    "method": "one-pot solvothermal synthesis",
+    "precursors": [
+      "PtCl4",
+      "RuCl3",
+      "FeCl3",
+      "CoCl2",
+      "NiCl2",
+      "ZnCl2",
+      "RECl3"
+    ],
+    "solvent": "oleylamine",
+    "reaction_temperature_K": 553.15,
+    "reaction_time_h": 2,
+    "post_treatment": [
+      "centrifugation",
+      "ethanol/n-hexane washing",
+      "vacuum drying",
+      "acid pickling (to remove surface RE oxides)"
+    ]
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "phase": "single-phase FCC solid solution",
+      "feature": "peak shifts induced by lattice distortion; no phase separation after acid pickling"
+    },
+    "TEM": {
+      "morphology": "nanoparticles uniformly distributed on CNT",
+      "lattice_spacing_nm": {
+        "PtRuFeCoNiZn/C": 0.222,
+        "PtRuFeCoNiZn-Ce/C": 0.229
+      },
+      "assigned_plane": "(111)"
+    },
+    "EDS_mapping": {
+      "distribution": "uniform distribution of Pt, Ru, Fe, Co, Ni, Zn and RE elements"
+    },
+    "XPS": {
+      "Pt": ["Pt0", "Pt2+"],
+      "Ru": ["Ru0", "Ru4+"],
+      "Co": ["Co0", "Co2+", "Co3+"],
+      "Ni": ["Ni0", "Ni2+", "Ni3+"],
+      "Ce": "Ce acts as electron donor; CeO2 removed after acid pickling",
+      "note": "Ce introduction induces negative binding energy shifts of Pt, Ru, Co and Ni"
+    }
+  },
+
+  "electrochemical_performance": {
+    "electrolytes": ["0.5 M H2SO4", "1.0 M KOH"],
+    "potential_scale": "vs RHE",
+
+    "HER": {
+      "overpotential_mV_at_10_mA_cm2": {
+        "PtRuFeCoNiZn/C": [13, 23],
+        "PtRuFeCoNiZn-Ce/C": [4, 7]
+      },
+      "Tafel_slope_mV_dec": {
+        "PtRuFeCoNiZn/C": [23, 27],
+        "PtRuFeCoNiZn-Ce/C": [14, 16]
+      },
+      "mechanism": "Tafel mechanism",
+      "stability": {
+        "current_density_mA_cm2": 100,
+        "duration_h": 100,
+        "environment": "acidic",
+        "performance_retention": "no obvious attenuation"
+      }
+    },
+
+    "OER": {
+      "overpotential_mV_at_10_mA_cm2": {
+        "PtRuFeCoNiZn/C": [168, 179],
+        "PtRuFeCoNiZn-Ce/C": [156, 132]
+      },
+      "Tafel_slope_mV_dec": {
+        "PtRuFeCoNiZn/C": [143, 242],
+        "PtRuFeCoNiZn-Ce/C": [98, 121]
+      },
+      "stability": {
+        "current_density_mA_cm2": [10, 100, 200, 300],
+        "duration_h": 100,
+        "environment": "acidic",
+        "performance_retention": "stable without significant degradation"
+      }
+    },
+
+    "overall_water_splitting": {
+      "cell_configuration": "PtRuFeCoNiZn-RE/C || PtRuFeCoNiZn-RE/C",
+      "cell_voltage_V_at_10_mA_cm2": {
+        "Ce": [1.34, 1.35],
+        "representative": 1.43
+      }
+    }
+  },
+
+  "in_situ_characterization": {
+    "ATR_IR": {
+      "key_intermediate": "OOH*",
+      "characteristic_peak_cm-1": 1235,
+      "finding": "Ce incorporation enhances OOH* adsorption intensity"
+    },
+    "EIS": {
+      "finding": "lower charge-transfer resistance after Ce incorporation"
+    }
+  },
+
+  "theoretical_computations": {
+    "method": "density functional theory (DFT)",
+    "model": "six-layer FCC PtRuFeCoNiZn (111) slab with sublayer Ce substitution",
+    "electronic_structure": {
+      "Ce_4f_state": "electron delocalization with charge transfer to neighboring metals",
+      "Bader_charge_Ce": "+0.99 |e|",
+      "effect": "surface dipole formation from surface to subsurface"
+    },
+    "HER_related": {
+      "descriptor": "hydrogen adsorption free energy ΔG(*H)",
+      "finding": "Ce-induced dipole weakens overly strong H adsorption, bringing ΔG(*H) closer to 0"
+    },
+    "OER_related": {
+      "rate_determining_step": "*O + H2O → *OOH",
+      "effect_of_Ce": "reduced energy barrier via optimized adsorption of *OH and *O"
+    }
+  }
+}
