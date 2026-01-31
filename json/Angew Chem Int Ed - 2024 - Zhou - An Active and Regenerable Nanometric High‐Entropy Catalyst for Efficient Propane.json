@@ -86,7 +86,7 @@
       "regeneration_method": "air calcination followed by H2 reduction",
       "air_calcination": {
         "temperature_K": 773.15,
-        "time_min": 30
+        "time_h": 0.5
       },
       "cycles": 4,
       "performance_retention": "negligible loss after four cycles"
@@ -109,3 +109,4 @@
     }
   }
 }
+
