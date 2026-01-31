@@ -32,7 +32,7 @@
     "calcination": {
       "temperature_K": 673.15,
       "time_h": 2,
-      "heating_rate_K_min": 5,
+      "heating_rate_K_min": 278.15,
       "atmosphere": "10% H2 / 90% Ar"
     }
   },
@@ -123,3 +123,4 @@
     "mechanistic_conclusion": "surface hydrogen coverage weakens CO binding and suppresses catalyst poisoning"
   }
 }
+
