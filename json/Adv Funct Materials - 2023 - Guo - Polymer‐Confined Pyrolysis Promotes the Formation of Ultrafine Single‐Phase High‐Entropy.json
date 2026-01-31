@@ -31,7 +31,7 @@
       "temperature_K": 1273.15,
       "time_h": 2,
       "atmosphere": "Ar",
-      "heating_rate_K_min": 5
+      "heating_rate_K_min": 278.15
     }
   },
 
@@ -114,3 +114,4 @@
     }
   }
 }
+
