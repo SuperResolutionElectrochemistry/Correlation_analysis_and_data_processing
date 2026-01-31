@@ -14,8 +14,8 @@
     "method": "Electrochemical deposition followed by tellurization",
     "precursors": "Co, Fe, Ni, Mo, W metal salts and Te powder",
     "reaction_conditions": {
-      "electrodeposition_temperature_K": 323.15,
-      "electrodeposition_time": "15 min",
+     "electrodeposition_temperature_K": 323.15,
+      "electrodeposition_time_h": 0.25,
       "tellurization_temperature_K": 573.15,
       "tellurization_time": "2 hours",
       "post_synthesis": "Dried at 60 °C after deposition, tellurization at 300 °C"
@@ -59,3 +59,4 @@
     "reaction_mechanism": "Enhanced OER performance attributed to the synergy of high mixed entropy and increased corrosion-resistance from Mo and W, with Te enhancing glass forming ability and catalytic active sites."
   }
 }
+
