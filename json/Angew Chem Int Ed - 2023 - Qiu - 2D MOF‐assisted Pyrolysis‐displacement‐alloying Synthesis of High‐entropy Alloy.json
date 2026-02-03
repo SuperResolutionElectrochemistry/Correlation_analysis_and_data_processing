@@ -1,125 +1,161 @@
 {
-  "literature_id": "HEA-json30",
+  "literature_id": "HEA-json24",
   "doi": "10.1002/anie.202306881",
 
   "HEA_composition": {
     "catalyst_name": "Co0.2Ru0.7Pt0.1/PNC NSs",
     "elements": ["Co", "Ru", "Pt"],
-    "atomic_ratio": "Co:Ru:Pt ≈ 19.1:70.7:10.2 (TEM-EDS, ICP-AES)",
-    "crystal_structure": "FCC",
-    "average_particle_size_nm": 1.5,
-    "support": "porous nitrogen-doped carbon nanosheets (PNC NSs)"
+    "composition": "Co/Ru/Pt = 19.1/70.7/10.2 (TEM-EDS, consistent with ICP-AES)",
+    "support": "porous N-doped carbon nanosheets (PNC NSs)",
+    "crystal_structure": "FCC alloy",
+    "average_particle_size_nm": "~1.5"
   },
 
   "synthesis": {
-    "method": "2D MOF-assisted pyrolysis–displacement–alloying (PDA)",
-    "MOF_template": "ZIF-67 nanosheets",
-    "steps": [
-      "pyrolysis of ZIF-67 nanosheets under N2 to form Co/PNC NSs",
-      "galvanic displacement with Ru and Pt precursors",
-      "thermal annealing to induce alloying"
-    ],
-    "pyrolysis_atmosphere": "N2",
-    "note": "exact pyrolysis and annealing temperatures not explicitly specified"
+    "method": "2D MOF-assisted pyrolysis–displacement–alloying (PDA) route",
+
+    "steps": {
+      "step1_MOF_to_Co_PNC": {
+        "precursor": "ZIF-67 nanosheets",
+        "atmosphere": "N2",
+        "process": "pyrolysis to obtain Co/PNC NSs",
+        "Co_loading_wt_percent": "~60 (ICP-AES)"
+      },
+
+      "step2_galvanic_displacement": {
+        "role_of_Co": "sacrificial template",
+        "description": "metal cations with more positive redox potential displace Co on nanoparticle surface"
+      },
+
+      "step3_alloying": {
+        "atmosphere": "N2",
+        "purpose": "promote complete alloying of different metals"
+      }
+    },
+
+    "versatility_demonstrated": {
+      "binary_alloys": ["CoRu", "CoPt", "CoIr", "CoRh", "CoPd"],
+      "ternary_alloys": ["CoRuPt", "CoPtPd"],
+      "high_entropy_example": "CoRuPtIrRhPd"
+    }
   },
 
   "physicochemical_characterization": {
-    "SEM": {
-      "morphology": "uniform square nanosheets covered with highly dispersed nanoparticles"
+    "TEM_SEM": {
+      "morphology": "square nanosheet profile uniformly covered by nanoparticles",
+      "dispersion": "highly dispersed on PNC NSs",
+      "particle_size_nm": "~1.5"
     },
-    "TEM": {
-      "average_particle_size_nm": 1.5
+
+    "HRTEM_XRD": {
+      "phase": "FCC alloy",
+      "fcc_peaks_2theta": ["~40° (111)", "~46.6° (200)", "~68.1° (220)"],
+      "residual_hcp": "weak peak at ~43.9° indicates minor hcp residue"
     },
-    "HRTEM": {
-      "lattice_planes": ["(111)", "(200)", "(220)"],
-      "structure": "FCC alloy"
-    },
-    "XRD": {
-      "phase": "predominantly FCC",
-      "note": "weak residual HCP diffraction observed"
-    },
+
     "EDS_mapping": {
-      "distribution": "Co, Ru and Pt uniformly distributed within individual nanoparticles"
+      "result": "Co, Ru, Pt uniformly distributed within individual nanoparticles"
     },
+
     "XPS": {
-      "Co": "Co0 peak shifts to higher binding energy after alloying",
-      "Ru": "Ru0 peak shifts to higher binding energy",
-      "Pt": "Pt0 peak shifts to lower binding energy",
-      "interpretation": "electron transfer among Co, Ru and Pt"
+      "main_findings": [
+        "Co0 peaks shift to higher binding energy after alloying",
+        "Ru0 peak shifts to higher binding energy in Co0.2Ru0.7Pt0.1",
+        "Pt0 peak shifts to lower binding energy compared with Co0.2Pt0.8",
+        "evidence of inter-element electron transfer"
+      ]
     },
-    "XAS": {
-      "edges": ["Ru K-edge", "Pt L3-edge", "Co K-edge"],
-      "findings": {
-        "Ru_M_bond_length_nm": 0.268,
-        "Ru_M_coordination_number": 7.5,
-        "note": "reduced coordination number attributed to ultrasmall particle size"
-      }
+
+    "XANES_EXAFS": {
+      "Ru_K_edge_shift": "shift to higher energy vs Ru foil and Co0.2Ru0.8",
+      "bond_type_detected": "Ru–M (M = Co or Pt)",
+      "average_Ru_M_bond_length_A": 2.675,
+      "Ru_coordination_number": {
+        "Co0.2Ru0.7Pt0.1": 7.5,
+        "Co0.2Ru0.8": 5.8,
+        "Ru_foil": 12
+      },
+      "note": "lower CN attributed to small particle size"
     }
   },
 
   "electrochemical_performance": {
-    "electrolyte": "0.1 M KOH",
-    "potential_scale": "vs RHE",
+    "reactions": ["HOR", "HER", "OER (after oxidation)"],
+    "electrolytes": {
+      "HOR": "0.1 M KOH (H2-saturated)",
+      "HER": "1 M KOH (N2-saturated)",
+      "OER": "1 M KOH (after air calcination)"
+    },
 
     "HOR": {
-      "mass_activity_A_mgPGM_at_50_mV": 1.84,
-      "specific_activity_enhancement": "11.5× compared with commercial Pt/C",
       "exchange_current_density_mA_cm2": 4.28,
-      "stability": {
-        "ADT_cycles": 20000,
-        "chronoamperometry_duration_s": 3600,
-        "current_decay_percent": 14.2
+      "electron_transfer": "2-electron HOR confirmed by Koutecky–Levich slope",
+      "KL_slope_cm2_mA1_s_half": 4.52,
+      "reference_theoretical_KL": 4.87,
+
+      "mass_activity_A_mg_PGM": {
+        "Co0.2Ru0.7Pt0.1": 1.84,
+        "commercial_Pt_C": 0.16,
+        "enhancement_vs_Pt_C": "≈11.5×"
       },
-      "CO_tolerance": {
-        "condition": "1000 ppm CO/H2",
-        "performance": "minor activity loss compared with severe poisoning on Pt/C"
+
+      "CO_tolerance": "small current decay in 1000 ppm CO/H2 compared with severe poisoning on Pt/C",
+
+      "durability": {
+        "ADT_cycles": 20000,
+        "result": "slight attenuation only",
+        "chronoamperometry_0_1V_3600s_decay_percent": 14.2,
+        "comparison": {
+          "Pt_C_decay_percent": 47.1,
+          "Ru_C": "lost activity before 2700 s"
+        }
       }
     },
 
     "HER": {
-      "electrolyte": "1 M KOH",
-      "overpotential_mV_at_10_mA_cm2": 23,
+      "overpotential_mV_at_10mA_cm2": 23,
       "Tafel_slope_mV_dec": 32.6,
-      "pH_universality": "active over wide pH range"
+      "relative_performance": "better than Co0.2Ru0.8, Co0.2Pt0.8, Ru/C, and Pt/C"
     },
 
     "OER": {
-      "catalyst_state": "oxidized Co0.2Ru0.7Pt0.1/PNC NSs-O",
-      "overpotential_mV_at_10_mA_cm2": 234
+      "sample": "air-calcined Co0.2Ru0.7Pt0.1/PNC NSs-O",
+      "overpotential_mV_at_10mA_cm2": 234,
+      "comparison": "commercial RuO2 ≈ 313 mV"
     },
 
     "overall_water_splitting": {
-      "configuration": "Co0.2Ru0.7Pt0.1/PNC NSs || Co0.2Ru0.7Pt0.1/PNC NSs-O",
-      "cell_voltage_V_at_100_mA_cm2": 1.57,
-      "stability_h": ">100"
+      "cell_configuration": "Co0.2Ru0.7Pt0.1 || Co0.2Ru0.7Pt0.1-O",
+      "voltage_V_at_100mA_cm2": 1.57,
+      "comparison_vs_PtC_RuO2": "Pt/C || RuO2 requires ~1.67 V",
+      "stability": "stable >100 h at 100 mA cm−2"
     }
   },
 
   "theoretical_computations": {
-    "method": "density functional theory (DFT)",
-    "models": [
-      "RuCo (hcp, (001))",
-      "RuCoPt (fcc, (111))"
-    ],
-    "electronic_structure": {
-      "Ru_d_band_center_eV": {
-        "Ru": -1.46,
-        "RuCo": -1.61,
-        "RuCoPt": -1.57
-      }
+    "models_used": {
+      "RuCo": "hcp (001)",
+      "RuCoPt": "fcc (111)"
     },
-    "HER_HOR_related": {
-      "hydrogen_binding_free_energy_eV": {
-        "Ru": -0.44,
-        "RuCo": -0.30,
-        "RuCoPt": -0.16
-      },
-      "water_formation_barrier": "lower on RuCoPt than on Ru and RuCo"
+
+    "d_band_centers_eV": {
+      "Ru": -1.46,
+      "RuCo": -1.61,
+      "RuCoPt": -1.57
     },
+
+    "hydrogen_binding_free_energy_eV": {
+      "Ru": -0.44,
+      "RuCo": -0.30,
+      "RuCoPt": -0.16
+    },
+
+    "water_formation_barrier": "RuCoPt < RuCo < Ru",
+
     "mechanistic_conclusion": [
-      "Pt-induced phase transition from HCP to FCC in CoRu alloy",
-      "optimized hydrogen adsorption strength",
-      "reduced energy barrier for water formation"
+      "Pt addition induces hcp→fcc phase transition",
+      "fcc RuCoPt weakens H* adsorption toward ideal (~0 eV)",
+      "lower barrier for *OH + *H → H2O promotes alkaline HOR/HER"
     ]
   }
 }
