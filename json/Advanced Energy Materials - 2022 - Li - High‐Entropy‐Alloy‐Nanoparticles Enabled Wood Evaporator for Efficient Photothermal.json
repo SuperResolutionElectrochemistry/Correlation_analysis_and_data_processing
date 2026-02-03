@@ -1,0 +1,57 @@
+{
+  "literature_id": "HEA-json29",
+  "doi": "10.1002/aenm.202203057",
+
+  "HEA_composition": {
+    "material_name": "HEA nanoparticles (series from 3 to 8 elements)",
+    "elements_series": ["3-HEA", "4-HEA", "5-HEA", "6-HEA", "7-HEA (FeCoNiTiVCrCu)", "8-HEA"],
+    "composition": "Elemental compositions determined by EDS, specific ratios not provided",
+    "crystal_structure": "Phase transforms from FCC to BCC with increasing elements (e.g., upon Cr addition)",
+    "average_particle_size_nm": "33–44 nm (size distribution provided in Figure S5)",
+    "support": "Dispersed on the surface of balsawood substrates to form HEA-BW composite evaporator"
+  },
+
+  "synthesis": {
+    "method": "Arc-discharge plasma method",
+    "precursors": "No specific precursors or exact amounts were mentioned",
+    "reaction_conditions": {
+      "temperature_K": "Not specified",
+      "reaction_time": "Not specified",
+      "post_synthesis": "Not specified"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "particle_size_nm": "33–44 nm",
+      "dispersion": "Uniformly dispersed on carbon support"
+    },
+    "XRD": {
+      "crystal_structure": "BCC",
+      "lattice_constants_A":"Not provided"
+    },
+    "mixing_entropy": {
+      "calculated_values_J_mol_K": "8.51 to 16.30 (increasing with number of elements)",
+      "note": "Entropy > 1.5R (12.47 J mol⁻¹ K⁻¹) for ≥5 elements defines high-entropy alloys"
+    }
+  },
+"photothermal_evaporation_performance": {
+    "application": "Solar steam generation and desalination",
+    "light_source": "Simulated sunlight (AM 1.5G)",
+    "optimal_material": "8-HEA-BW (8-element HEA on balsawood, cut at 0°)",
+    "optical_absorption": "> 97% across 250–2500 nm",
+    "surface_temperature": "~85 °C under 1 sun irradiation",
+    "evaporation_rate_1_sun": {
+      "pure_water": "2.58 kg m⁻² h⁻¹",
+      "3.5_wt%_brine": "2.19 kg m⁻² h⁻¹",
+      "20_wt%_brine (hypersaline)": "1.65 kg m⁻² h⁻¹"
+    },
+    "long_term_stability": "Stable evaporation rate over 10 cycles in 20 wt% brine with no salt accumulation",
+    "outdoor_performance": "Stable freshwater production under natural sunlight over 14 days"
+  },
+
+  "photothermal_mechanism": {
+    "primary_mechanism": "d-d interband transitions (IBTs) in 3d transition metals",
+    "explanation": "The fully filled energy regions around the Fermi level due to multiple 3d transition metals broaden optical absorption across the solar spectrum, enhancing photothermal conversion."
+  }
+}

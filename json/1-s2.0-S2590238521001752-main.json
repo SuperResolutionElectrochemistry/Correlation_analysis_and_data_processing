@@ -1,0 +1,56 @@
+{
+  "literature_id": "HEA-json28",
+  "doi": "10.1016/j.matt.2021.04.014",
+
+  "HEA_composition": {
+    "catalyst_name": "15-element HEA nanoalloy",
+    "elements": ["Pt", "Pd", "Rh", "Ru", "Ir", "Cu", "Fe", "Co", "Ni", "Zr", "Ti", "Hf", "V", "Nb", "W"],
+    "composition": "A mixture of 15 transition metals, including both early and late transition metals",
+    "crystal_structure": "FCC",
+    "average_particle_size_nm": "Not specified in the text",
+    "support": "Dispersed on carbon nanofiber substrates"
+  },
+
+  "synthesis": {
+    "method": "High-temperature shock synthesis",
+    "precursors": "No specific precursors or exact amounts mentioned",
+    "reaction_conditions": {
+      "temperature_K": 1800,
+      "reaction_time_ms": 50,
+      "post_synthesis": "Not specified"
+    }
+  },
+
+  "physicochemical_characterization": {
+    "XRD": {
+      "crystal_structure": "FCC",
+      "lattice_constants_A": 3.78
+    },
+    "XPS": {
+      "metal_states": "Profiles of metals in 15-HEA nanoparticles were analyzed but specific metal states not detailed"
+    },
+    "HAXPES": {
+      "VB_spectrum": "Not mentioned in the text"
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "Not specified",
+    "electrolyte": "Not specified",
+    "overpotential_mV": {
+      "at_10_mA_cm2": "Not provided",
+      "at_100_mA_cm2": "Not provided"
+    },
+    "comparison_overpotential_mV": {
+      "Commercial_Pt_C": {
+        "10_mA_cm2": "Not provided",
+        "100_mA_cm2": "Not provided"
+      }
+    },
+    "Tafel_slope_mV_dec": "Not provided in the text"
+  },
+
+  "theoretical_calculation": {
+    "reaction_mechanism": "The study emphasizes the role of high entropy in stabilizing metal reduction and improving alloying."
+  }
+}

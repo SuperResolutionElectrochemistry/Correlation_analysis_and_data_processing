@@ -1,0 +1,124 @@
+{
+  "literature_id": "HEA-json30",
+  "doi": "10.1038/s41467-024-50009-5",
+
+  "HEA_composition": {
+    "catalyst_name": "PdPtRuCuNi HEA",
+    "elements": ["Pd", "Pt", "Ru", "Cu", "Ni"],
+    "number_of_elements": 5,
+    "support": "HNO3-modified carbon nanofibers (CNFs)",
+    "atomic_ratio": {
+      "Pd": 21,
+      "Pt": 13,
+      "Ru": 20,
+      "Cu": 24,
+      "Ni": 22
+    },
+    "average_particle_size_nm": 17.5,
+    "particle_size_distribution_nm": "17.5 ± 12.5"
+  },
+
+  "synthesis": {
+    "method": "solvothermal synthesis",
+    "metal_precursors": [
+      "Pd(acac)2",
+      "Pt(acac)2",
+      "Ru(acac)3",
+      "Cu(acac)2",
+      "Ni(acac)2"
+    ],
+    "support_preparation": {
+      "support": "carbon nanofibers",
+      "acid_treatment": "HNO3",
+      "temperature_K": 353.15,
+      "time_h": 6
+    },
+    "reaction_temperature_K": 493.15,
+    "reaction_time_h": 4,
+    "post_treatment": {
+      "drying_temperature_K": 333.15,
+      "drying_time_h": 6
+    }
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "morphology": "nanoparticles uniformly supported on CNFs"
+    },
+    "HRTEM": {
+      "crystallinity": "nanocrystalline",
+      "lattice_spacing_nm": {
+        "(111)": 0.220
+      }
+    },
+    "HAADF_STEM_EDS": {
+      "element_distribution": "homogeneous distribution of all five elements"
+    },
+    "XRD": {
+      "crystal_structure": "FCC",
+      "characteristic_peaks_2theta_deg": [41.4, 47.4],
+      "assigned_planes": ["(111)", "(200)"]
+    },
+    "XPS": {
+      "valence_state": "predominantly metallic",
+      "binding_energy_shift": "Pd, Pt, Ru, Cu shift to lower BE; Ni shifts slightly higher"
+    },
+    "XAFS": {
+      "feature": "shortened metal–metal bond lengths compared with metal foils",
+      "interpretation": "strong electronic interaction in HEA"
+    }
+  },
+
+  "catalytic_performance": {
+    "reaction": "hydrogenation of aromatics",
+    "reaction_mode": "thermal catalysis",
+    "conditions": {
+      "temperature_K": 298.15,
+      "hydrogen_pressure_bar": "≤1 (solid DEB), 10 (other aromatics)",
+      "solvent": "none (solvent-free)"
+    },
+    "model_reactant": "1,4-bis(phenylethynyl)benzene (DEB)",
+    "hydrogen_uptake_capacity_cm3_g": 762,
+    "conversion": {
+      "alkynyl_groups_percent": 100,
+      "phenyl_groups_percent": 100
+    },
+    "comparison_catalysts": {
+      "Pd/C": {
+        "hydrogen_uptake_capacity_cm3_g": 198,
+        "phenyl_hydrogenation": "not observed"
+      }
+    },
+    "substrate_scope": {
+      "toluene": 100,
+      "biphenyl": 100,
+      "diphenylacetylene": 100,
+      "styrene": 98.6,
+      "phenylacetylene": 98.5
+    }
+  },
+
+  "mechanistic_insights": {
+    "synergistic_elements": ["Pd", "Pt", "Ru"],
+    "role_of_elements": {
+      "Pd": "activation of alkynyl groups and H2 dissociation",
+      "Pt_Ru": "facilitation of phenyl ring hydrogenation",
+      "Cu_Ni": "modulation of hydrogen binding and reaction kinetics"
+    },
+    "DFT_findings": {
+      "H2_activation": "broadened distribution of H adsorption energies",
+      "phenyl_hydrogenation_barrier_eV": {
+        "PdPtRuCuNi": 0.35,
+        "Pd": 0.58,
+        "Ru": 0.56
+      }
+    },
+    "proposed_mechanism": [
+      "H2 dissociation on HEA surface",
+      "hydrogen spillover and migration",
+      "preferential alkynyl hydrogenation",
+      "stepwise phenyl hydrogenation",
+      "detachment of fully hydrogenated products"
+    ]
+  }
+}

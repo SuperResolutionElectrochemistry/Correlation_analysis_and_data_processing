@@ -1,0 +1,123 @@
+{
+  "literature_id": "HEA-json32",
+  "doi": "10.1021/acsnano.3c03884",
+
+  "HEA_composition": {
+    "material_type": "peptide-enabled high-entropy alloy nanoparticles",
+    "elements_sets": [
+      ["Pt", "Pd", "Au", "Co", "Cu"],
+      ["Pt", "Pd", "Au", "Co", "Sn"],
+      ["Pt", "Pd", "Au", "Co", "Ce"],
+      ["Pt", "Pd", "Au", "Co", "Sn", "Ce"],
+      ["Pt", "Pd", "Au", "Co", "Sn", "Ce", "Cu"]
+    ],
+    "number_of_elements_range": "5–7",
+    "particle_size_range_nm": "2–5",
+    "configurational_entropy": ">1.5R",
+    "support": "carbon (for electrochemical tests)"
+  },
+
+  "synthesis": {
+    "method": "aqueous peptide-enabled chemical reduction",
+    "peptides": {
+      "BP7A": "TLHVSSY (Pt-affinity)",
+      "Co2-P2": "KLHSSPHTPLVQ (Co-affinity)"
+    },
+    "metal_precursors": [
+      "H2PtCl6",
+      "K2PdCl4",
+      "HAuCl4·3H2O",
+      "CoCl2·6H2O",
+      "SnCl4·5H2O",
+      "Ce(NO3)3·6H2O",
+      "CuCl2·2H2O"
+    ],
+    "reducing_agent": "NaBH4",
+    "reaction_temperature_K": 298.15,
+    "reaction_time_h": 1,
+    "solvent": "water"
+  },
+
+  "physicochemical_characterization": {
+    "TEM": {
+      "size_distribution": "Gaussian, 2–5 nm"
+    },
+    "HAADF_STEM": {
+      "morphology": "sub-5 nm nanoparticles",
+      "crystallinity": "polycrystalline domains"
+    },
+    "HRTEM": {
+      "lattice_spacing_nm": {
+        "(111)": 0.228
+      },
+      "assigned_structure": "FCC-type (Pt/Pd-based)"
+    },
+    "STEM_EDS": {
+      "elemental_distribution": "homogeneous, no phase segregation"
+    },
+    "ICP_MS": {
+      "finding": "near-equimolar composition with slight deviations"
+    },
+    "HE_XRD_PDF": {
+      "structure": "disordered FCC-type solid solution",
+      "first_coordination_shell_A": "~2.75"
+    },
+    "EXAFS": {
+      "edges": ["Au L3-edge"],
+      "use": "validation of RMC-derived coordination numbers"
+    },
+    "RMC_modeling": {
+      "output": [
+        "atomic-scale structure models",
+        "surface and bulk coordination environments",
+        "surface configurational entropy"
+      ]
+    }
+  },
+
+  "electrochemical_performance": {
+    "reaction": "methanol electrooxidation reaction (MOR)",
+    "electrolyte": "1 M KOH + 1 M methanol",
+    "potential_scale": "RHE",
+    "electrode": "glassy carbon",
+    "loading_ug_cm2": "~15",
+
+    "activity": {
+      "best_catalyst": "BP7A PtPdAuCoSn",
+      "forward_peak_current_density_mA_cm2_ECSA": 27.3,
+      "benchmark_comparison": {
+        "Pt_C": 3.5,
+        "Pd_C": 1.0
+      }
+    },
+
+    "onset_potential": {
+      "definition": "potential at 1 mA cm−2",
+      "overpotential_reduction_vs_Pt_C_mV": 210,
+      "overpotential_reduction_vs_Pd_C_mV": 480
+    },
+
+    "stability": {
+      "note": "customary stability tests not performed due to glassy carbon electrode configuration"
+    }
+  },
+
+  "structure_function_relationship": {
+    "key_descriptors": [
+      "Pt–Pt surface coordination number",
+      "fraction of surface Pt atoms adjacent to oxophilic atoms (θPt–M)"
+    ],
+    "optimal_configuration": {
+      "Pt_ensembles": "trimer and tetramer Pt configurations",
+      "average_theta_Pt_M_percent": "69.66 ± 12.39"
+    },
+    "mechanistic_interpretation": [
+      "larger Pt ensembles favor indirect MOR pathway (CO2 formation)",
+      "proximal oxophilic atoms promote OHads formation and CO removal"
+    ],
+   "conceptual_framework": {
+      "name": "adsorption energy distribution pattern (AEDP)",
+      "description": "A continuous distribution of binding energies arising from the multitude of possible atomic arrangements in HEA surfaces."
+    }
+  }
+}
